@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: task-check-template-compliance.html 
+keywords: templates, resource templates, application templates, volume templates, drift, compliant 
+summary: Cloud Manager可以監控使用「偏移」功能建立範本的資源時所使用的參數值。「飄移」可識別已變更且不再符合範本設定的資源。 
+---
+= 檢查資源是否符合範本規範
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager可以監控使用「偏移」功能建立範本的資源時所使用的參數值。「飄移」可識別已變更且不再符合範本設定的資源。
+
+此時、心軸會識別資源中已變更的參數、您必須手動調整資源、使其符合範本的要求。
+
+
+
+== 漂流如何運作
+
+偏移可識別不符合規範的參數、如下所示：
+
+. 建立範本時、您會針對不想讓使用者變更的特定參數開啟偏移功能。例如、您可能需要使用「預設」原則、為從範本建立的所有磁碟區建立Snapshot複本。
++
+image:screenshot_template_drift_on_param.png["顯示如何在範本中的單一參數上啟用偏移的快照。"]
+
+. 開啟範本的偏移功能、然後儲存範本。
++
+image:screenshot_template_drift_on_template.png["顯示如何啟用範本偏移的快照。"]
+
+. 儲存管理員會執行範本以建立磁碟區。
+. 之後、儲存設備管理員會編輯磁碟區並停用Snapshot複本。
+. 您在所有範本上執行偏移檢查、而AppTemplate服務會將Snapshot複本範本設定與Volume中的目前設定進行比較。任何不合規的值都會加上旗標、以便修正不正確的設定。
+
+
+
+
+== DrivFT儀表板
+
+「DrivFT儀表板」會顯示已使用範本建立的資源總數（例如磁碟區）、仍符合範本的數量、不符合標準的數量（偏移）、以及停用「DrivFT」（飄移）所建立的數量。
+
+image:screenshot_template_drift_dashboard.png["AppTemplate服務的DrivFT儀表板快照。"]
+
+* 每欄頂端的控制項可讓您依照數字或字母順序來排序結果。
+* 。 image:screenshot_plus_icon.gif[""] 可讓您依範本名稱、資料刪除原則與狀態及動作類型來篩選結果。例如：
++
+image:screenshot_template_filter_drift_status.png["顯示如何使用篩選工具小工具來精簡資源清單的快照。"]
+
+* 搜尋列可讓您搜尋特定的Volume名稱或範本名稱。
+* 若要深入瞭解實際資源（或磁碟區）的詳細資料、例如工作環境和儲存VM、請按一下 image:screenshot_sync_status_icon.gif[""]。
++
+image:screenshot_template_drift_vol_details.png["顯示心軸儀表板中磁碟區詳細資料的快照。"]
+
+
+
+
+
+== 填入「DrivFT儀表板」
+
+您必須先對範本執行偏移檢查、然後再將其填入「飄移儀表板」中的值。
+
+您可以從範本儀表板執行所有範本的偏移檢查：
+
+image:screenshot_template_drift_for_all.png["顯示如何執行所有範本的偏移檢查的快照。"]
+
+您可以從範本儀表板對單一範本執行偏移檢查：
+
+image:screenshot_template_drift_for_one.png["顯示如何執行單一範本的偏移檢查的快照。"]
+
+
+
+== 針對不合規的資源建立偏移報告
+
+您可以檢視單一資源的偏移報告、或執行報告下載所有資源的報告。您可以使用此報告指派行動給系統管理員、以便進行變更、使資源恢復符合範本的規定。
+
+您可以按一下「DrivFT儀表板」中某個資源的「DrivFT」圖示、以檢視每個資源中不相容的參數清單。
+
+image:screenshot_template_drift_report_one_resource.png["單一資源的飄移報告快照。"]
+
+若要檢視從範本建立之資源的偏移報告、請按一下 image:button_download.png[""] 下載.CSV檔案。飄移報告會反映頁面上目前篩選的內容、除非您尚未套用頁面上的任何篩選條件、否則不會顯示所有資源。
+
+
+
+=== 「偏移」報告中的複寫健全狀況詳細資料
+
+何時 link:task-define-templates.html#add-replication-functionality-to-a-volume["使用範本在磁碟區上啟用複寫"]、您可以選擇在「啟用複寫健全狀況監控」欄位中啟用偏移、以在偏移報告中顯示更詳細的複寫資訊。啟用後、「偏移」報告會顯示「複寫」關係是否健全或不健全（偏移）、以及SnapMirror延遲時間、狀態和上次傳輸時間。
+
+此快照顯示在偏移報告中、SnapMirror關係不健全的複寫詳細資料。
+
+image:screenshot_template_drift_snapmirror_details.png["DrivFT報告的快照、顯示不健全的SnapMirror關係複寫詳細資料。"]
+
+*附註：*複寫一開始會套用至磁碟區、因此健全狀況會傳回為「假」、表示這是不健全的。幾分鐘後、將會顯示實際的複寫狀態。

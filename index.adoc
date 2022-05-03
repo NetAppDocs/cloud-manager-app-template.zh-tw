@@ -1,0 +1,16 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: The AppTemplate service enables you to standardize resource creation for your Cloud Manager working environments. 
+summary: AppTemplate服務可讓您標準化Cloud Manager工作環境的資源建立。 
+---
+= 應用程式範本文件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

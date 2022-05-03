@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: concept-tagging.html 
+keywords: tags, overview, conceptual, resource tags, volume tags, AWS tags, Azure tags 
+summary: Cloud Manager可讓您將標記套用至現有資源、以協助組織及管理這些資源。標記是中繼資料、可用來將資源分組、以識別應用程式、環境、地區、帳單代碼、雲端供應商、 以及更多資訊。 
+---
+= 深入瞭解標記
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager可讓您將標記套用至現有資源、以協助組織及管理這些資源。標記是中繼資料、可用來將資源分組、以識別應用程式、環境、地區、帳單代碼、雲端供應商、 以及更多資訊。
+
+標籤由*標籤機碼*和*標籤值*組成。例如、您可以建立名為「Environment」的標記機碼、然後新增「Production」和「Test」的標記值。將這些資源套用至您的資源之後、您可以快速搜尋並檢視符合金鑰/值配對的資源。
+
+您可以在建立工作環境或Azure NetApp Files 使用本產品時、將標記金鑰/值配對新增至_new資源。您也可以在中定義標記金鑰/值配對 link:task-define-templates.html["您所建置的Cloud Manager範本"] 適用於您的儲存管理員和DevOps工程師。
+
+您可以使用標記服務新增標記、也可以變更或刪除現有標記。
+
+
+
+== 功能
+
+標記服務提供下列功能與優點：
+
+* 建立符合您環境中所用詞彙的標記索引鍵和標記值
+* 整理環境中的資源、以利監控和管理
+* 依資源類型新增、移除及編輯標記索引鍵和標記值
+* 標記ONTAP AWS和Azure環境中的資源和資源。
+
+
+
+
+== 定價與授權
+
+若要標記您的資源、無需授權、所有具有「帳戶管理」或「工作區管理」角色的Cloud Manager使用者均可自由使用。
+
+
+
+== 您可以標記的資源
+
+您可以將標記套用至下列資源。
+
+[cols="30,35,35"]
+|===
+| 供應商 | 服務 | 資源 
+
+
+.3+| ONTAP | Cloud Volumes ONTAP | Aggregate Storage VM Volume 
+
+
+| 內部部署ONTAP 的功能 | Aggregate Storage VM Volume 
+
+
+| Azure NetApp Files | Volume 
+
+
+| NetApp服務 | 同步 | 關係 
+
+
+| AWS | EC2. | 執行個體安全群組子網路Volume VPC 
+
+
+.4+| Azure | 運算 | Snapshot虛擬機器 
+
+
+| 網路 | 安全性群組虛擬網路 
+
+
+| 資源 | 資源群組 
+
+
+| 儲存設備 | 儲存帳戶 
+
+
+.2+| GCP | 運算 | 執行個體 
+
+
+| 儲存設備 | 鏟斗 
+|===
+如需AWS EC2標籤的相關資訊、請參閱 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS 文件：標記 Amazon EC2 資源"^]。
+
+如需Azure標籤的相關資訊、請參閱 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json["Azure文件：標記Azure資源"^]。
+
+如需Google標籤的相關資訊、請參閱 https://cloud.google.com/compute/docs/labeling-resources["Google Cloud文件：標記Google Cloud資源"^]。
+
+
+
+== 先決條件
+
+
+
+=== 驗證您的AWS Connector權限
+
+如果您是使用Cloud Manager 3.9.10或更新版本建立Connector、那麼您就已經設定好了。如果您使用舊版Cloud Manager建立Connector、則需要新增Cloud Manager IAM角色的一些必要權限、以標記AWS EC2執行個體：
+
+[source, json]
+----
+{
+  "Action": [
+    "ec2:CreateTags",
+    "ec2:DeleteTags",
+    "ec2:DescribeTags",
+    "tag:getResources",
+    "tag:getTagKeys",
+    "tag:getTagValues",
+    "tag:TagResources",
+    "tag:UntagResources"
+  ],
+  "Resource": "*",
+  "Effect": "Allow",
+  "Sid": "tagServicePolicy"
+}
+----
+
+
+=== 驗證Azure Connector權限
+
+如果您是使用Cloud Manager 3.9.10或更新版本建立Connector、那麼您就已經設定好了。如果您使用舊版Cloud Manager建立Connector、則需要新增Cloud Manager營運者IAM角色的必要權限、以標記Azure資源：
+
+[source, json]
+----
+{
+  "id": "<ID>",
+  "properties": {
+    "roleName": "Cloud Manager Operator-<ID>",
+    "description": "Cloud Manager Operator",
+    "assignableScopes": [
+      "/subscriptions/<SUBSCRIPTION-ID>"
+    ],
+    "permissions": [
+      {
+        "actions": [
+          "Microsoft.Resources/tags/read",
+          "Microsoft.Resources/tags/write",
+          "Microsoft.Resources/tags/delete",
+          "Microsoft.ClassicCompute/virtualMachines/read"
+        ],
+        "notActions": [],
+        "dataActions": [],
+        "notDataActions": []
+      }
+    ]
+  }
+}
+----
+
+
+== 標記規則與限制
+
+建立標記金鑰和標記值時、適用下列規則：
+
+* 金鑰長度上限：128個字元
+* 金鑰值長度上限：256個字元
+* 有效的標記和標記值字元：字母、數字、空格和特殊字元（_、@、&、*等）
+* 標記區分大小寫。
+* 每個資源的標記上限：30個
+* 每個資源的每個標記金鑰都必須是唯一的
+
+
+
+
+=== 標記範例
+
+[cols="50,50"]
+|===
+| 金鑰 | 價值 
+
+
+| ENV | 正式作業測試 
+
+
+| 部門 | 財務銷售人員 
+
+
+| 擁有者 | 管理儲存設備 
+|===

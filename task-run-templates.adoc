@@ -1,0 +1,180 @@
+---
+sidebar: sidebar 
+permalink: task-run-templates.html 
+keywords: templates, resource templates, services templates, volume templates, working environment templates 
+summary: 選取貴組織所建置的其中一個應用程式範本、以建立針對特定工作負載和應用程式最佳化的工作環境或磁碟區。範本也可讓您在磁碟區或現有磁碟區上啟動Cloud Backup、Cloud Data Sense和Replication（SnapMirror）。 
+---
+= 使用範本建立或修改資源
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+選取貴組織所建置的其中一個應用程式範本、以建立針對特定工作負載和應用程式最佳化的工作環境或磁碟區。範本也可讓您啟動 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["雲端備份"^]、 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["雲端資料感測"^]和 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["複寫（SnapMirror）"^] 在已建立的磁碟區或現有磁碟區上。
+
+範本可讓您建立Cloud Volumes ONTAP 適用於內部Azure NetApp Files 部署ONTAP 的各種作業系統的各種資料。
+
+
+
+== 快速入門
+
+請依照下列步驟快速入門、或向下捲動至其餘部分以取得完整詳細資料。
+
+.span class="image"><imgrc="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] alt="1"></span>請確認必要的先決條件
+* 在您Cloud Volumes ONTAP 使用範本建立一個適用於內部部署ONTAP 的功能完善的功能區之前、Azure NetApp Files 請先確定您可以存取要部署該磁碟區的適當工作環境。
+
+
+* 如果範本啟動磁碟區上的雲端服務、例如 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["雲端備份"^] 或 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["雲端資料感測"^]，確保服務在您的環境中處於活動狀態並獲得許可。
+
+
+[role="quick-margin-para"]
+選取「*應用程式範本*」服務、然後按一下「*範本*」索引標籤。
+
+[role="quick-margin-para"]
+選取範本、按一下*執行範本*、然後在可編輯的欄位中輸入值以建立資源。
+
+
+
+== 需求
+
+請閱讀下列要求、確認您擁有支援的組態。
+
+* 如果您還沒有連接器、 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["瞭解如何建立連接器"^] 適用於AWS、Azure和GCP。
+* 建立Cloud Volumes ONTAP 一個SNetApp功能區時、請確保Cloud Volumes ONTAP 您擁有一個可供使用的功能不全的工作環境。
+* 建立內部部署ONTAP 的SNetApp時、請確保您擁有內部部署ONTAP 的可運作環境。
+* 建立Azure NetApp Files 一個SNetApp功能區時、請確保Azure NetApp Files 您擁有一個可供使用的功能不全的工作環境。
+* 如果範本啟動磁碟區上的雲端服務、例如  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["雲端備份"^]、 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["雲端資料感測"^]或 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["複寫（SnapMirror）"^]，確保服務在您的環境中處於活動狀態並獲得許可。
+
+
+
+
+== 選取並執行Volume範本
+
+有多種方法可以選取及執行範本來建立新的Volume：
+
+* 從工作環境執行Volume範本
+* 從「範本」儀表板執行Volume範本
+
+
+無論您選擇何種方法、您必須定義的所需Volume參數詳細資料都可在下列各節中找到：
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["如何配置Cloud Volumes ONTAP 功能不均"^]
+* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["如何配置Azure NetApp Files 功能不均"^]
+* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-ontap.html#creating-volumes-from-templates["如何配置內部部署ONTAP 的功能"^]
+
+
+
+
+=== 從工作環境執行Volume範本
+
+您可以從「工作環境」頁面和「磁碟區詳細資料」頁面、將磁碟區新增至現有的工作環境。
+
+.步驟
+. 從「工作環境」頁面或「磁碟區詳細資料」頁面、按一下「從範本*新增磁碟區」。
++
+image:screenshot_template_add_vol_from.png["兩個螢幕擷取畫面顯示使用者如何從範本建立新磁碟區。"]
+
++
+此時會顯示_範本儀表板_、其中僅列出適用於所選工作環境的範本、例如、它只會顯示Cloud Volumes ONTAP 一些範本。
+
+. 按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 和*執行範本*。
++
+image:screenshot_template_run_from_dashboard.png["顯示如何從範本儀表板執行範本的快照。"]
+
++
+此時會出現_從Template新增Volume _頁面。
+
+. 在可編輯欄位中輸入值以建立磁碟區、然後按一下*執行範本*。
++
+image:screenshot_run_template_from_canvas.png["螢幕快照顯示您從範本建立磁碟區所需定義的參數。"]
+
+
+
+
+
+=== 從「範本儀表板」執行Volume範本
+
+您可以從_範本儀表板_將磁碟區新增至現有的工作環境。
+
+.步驟
+. 選取「*應用程式範本*」服務、然後按一下「*範本*」索引標籤。
++
+此時會顯示_範本儀表板_。
+
+. 針對您要使用的範本、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 和*執行範本*。
++
+image:screenshot_template_run_from_dashboard2.png["顯示如何從範本儀表板執行範本的快照。"]
+
++
+「執行範本_」頁面隨即出現。
+
+. 在可編輯欄位中輸入值以建立磁碟區、然後按一下*執行範本*。
++
+image:screenshot_run_template_from_dashboard.png["螢幕快照顯示您從範本建立磁碟區所需定義的參數。"]
+
++
+請注意、當您從儀表板執行範本時、需要選取工作環境和其他變數（例如儲存VM和/或Aggregate）。當您從工作環境執行範本時、工作環境會自動填入。
+
+
+
+
+
+== 選取並執行工作環境範本
+
+如果貴公司已建立此功能的範本、您可以從_範本儀表板_建立新的工作環境。
+
+如果您對建立工作環境所需的詳細資料有任何疑問、請參閱 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["在 Cloud Volumes ONTAP AWS 中啟動"^]。
+
+.步驟
+. 選取「*應用程式範本*」服務、然後按一下「*範本*」索引標籤。
++
+此時會顯示_範本儀表板_。
+
+. 針對您要使用的範本、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 和*執行範本*。
++
+image:screenshot_template_run_from_dashboard3.png["顯示如何從範本儀表板執行範本的快照。"]
+
++
+「執行範本_」頁面隨即出現。
+
+. 在可編輯欄位中輸入值、以建立工作環境和第一個磁碟區、然後按一下*執行範本*。
++
+image:screenshot_template_run_from_dashboard_we.png["螢幕快照顯示您從範本建立工作環境所需定義的參數。"]
+
+
+
+
+
+== 選取並執行尋找現有資源的範本
+
+如果貴公司使用此功能建立了範本、您可以執行範本來尋找特定資源（例如磁碟區）、然後在這些資源上啟用雲端服務（例如Cloud Backup）。執行範本時、您可以稍微調整一下、以便只將雲端服務套用至適當的資源。
+
+.步驟
+. 選取「*應用程式範本*」服務、然後按一下「*範本*」索引標籤。
++
+此時會顯示_範本儀表板_。
+
+. 針對您要使用的範本、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 和*執行範本*。
++
+image:screenshot_template_run_from_dashboard4.png["顯示如何從範本儀表板執行範本的快照。"]
+
++
+「_執行範本_」頁面隨即出現、並執行範本中定義的搜尋、以尋找符合條件的磁碟區。
+
+. 在_Volume Results（磁碟區結果）區域中檢視傳回的磁碟區清單。
++
+image:screenshot_template_find_search_results.png["快照顯示從「尋找資源」搜尋條件傳回的磁碟區。"]
+
+. 如果結果符合您的預期、請使用範本_在Volume上啟用雲端備份_一部分的條件、為您想要啟用雲端備份的每個磁碟區選取核取方塊、然後按一下*執行範本*。
++
+如果結果與您預期的不一樣、請按一下 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 在_Search Criteria（搜尋條件）旁、進一步精簡搜尋。
+
+
+
+範本將會執行、並在您從搜尋條件中檢查的每個磁碟區上啟用Cloud Backup。
+
+任何錯誤都會在_執行您的範本_頁面中叫出、您可以視需要解決問題。

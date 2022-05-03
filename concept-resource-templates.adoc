@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: concept-resource-templates.html 
+keywords: templates, overview, conceptual, resource templates, application templates, volume templates 
+summary: AppTemplate服務可讓您在工作環境中標準化資源建立。例如、您可以在稍後儲存管理員使用範本建立磁碟區時、在「Volume範本」中硬式編碼必要的參數。這可能包括所需的磁碟類型、大小、傳輸協定、快照原則、雲端供應商、 以及更多資訊。您也可以為每個建立的Volume開啟特定服務、例如Cloud Backup。 
+---
+= 深入瞭解AppTemplate
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+AppTemplate服務可讓您在工作環境中標準化資源建立。例如、您可以在稍後儲存管理員使用範本建立磁碟區時、在「Volume範本」中硬式編碼必要的參數。這可能包括所需的磁碟類型、大小、傳輸協定、快照原則、雲端供應商、 以及更多資訊。您也可以為每個建立的Volume開啟特定服務、例如Cloud Backup。
+
+範本可讓儲存管理員輕鬆建立專為每個已部署應用程式的工作負載需求最佳化的磁碟區、例如資料庫、電子郵件或串流服務。而且儲存架構設計師知道每個磁碟區都是針對每個應用程式最佳化建立、因此能更輕鬆地完成工作。
+
+
+
+== 功能
+
+AppTemplate提供下列功能與優點：
+
+* 自動化並改善基礎架構的設計與開發
+* 提供單一位置以啟動不同的NetApp雲端服務、例如Cloud Backup和Cloud Data Sense
+* 識別已變更且不再符合範本的資源（使用「偏移」功能）
+
+
+
+
+==== 什麼是「飄移」？
+
+「偏移」可讓Cloud Manager監控使用範本建立資源時所使用的參數值。此時、「飄移」可以識別資源何時已變更、以便您手動進行調整、使其符合範本的要求。未來當資源超出法規遵循範例時、我們將能傳送通知給您、甚至可以反轉使用者的變更、使從範本建立的所有資源自動恢復法規遵循狀態。
+
+link:task-check-template-compliance.html["深入瞭解飄移"]。
+
+
+
+== 可用的範本動作
+
+範本是「行動」的鏈、具有一些預先定義的值。您可以建立包含下列動作的範本：
+
+*資源行動：*
+
+* 建立Cloud Volumes ONTAP 一個流通（AWS、Azure或GCP）
+* 建立Azure NetApp Files 一個流通量
+* 建立內部部署ONTAP 的不全功能資料
+* 建立Cloud Volumes ONTAP 運作環境（AWS上的單一節點或HA系統）
+* 尋找符合特定條件的現有資源（以便您在結束資源時套用「服務」動作）
+
+
+*服務行動：*
+
+* 啟動 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["雲端備份"^] 在Volume上（Azure NetApp Files 不適用於
+* 啟動 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["雲端資料感測"^] 在Volume上
+* 啟動 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["複寫"^] 在Volume上（Azure NetApp Files 不適用於
+
+
+例如、您可以建立建立Cloud Volumes ONTAP 一個範本來建立一個功能區。或是建立Cloud Volumes ONTAP 一個「還原」Volume、然後在該Volume上啟用「雲端備份」。或是建立Cloud Volumes ONTAP 一個SURFO Volume、然後在該Volume上啟用Cloud Backup _and Cloud Data感應。
+
+NetApp會隨著時間增加更多行動。
+
+
+
+== 應用程式範本的運作方式
+
+應用程式範本服務由3個部分組成。執行範本後、可用的範本「動作」、自訂的應用程式範本、以及已部署的資源。下圖顯示每個元件之間的關係：
+
+image:diagram_template_flow1.png["與建立及使用應用程式範本有關的不同使用者圖表。"]
+
+在較高層級、範本的運作方式如下：
+
+. NetApp定義可用的範本「行動」。
++
+例如、建立Cloud Volumes ONTAP 一個「動作」來建立一個「聲音集」或Azure NetApp Files 一個「聲音集」。
+
+. 您的儲存架構設計師會選取要用來建立應用程式範本的「動作」、然後針對列出的參數硬編碼特定值。
++
+例如、他們選擇高速磁碟和大量的RAM用於Cloud Volumes ONTAP 支援Oracle資料庫的工作負載。而且需要為每個磁碟區進行備份。
+
+. 您的儲存管理員會使用範本來建立資源、這些資源會針對要使用的應用程式進行最佳化。
++
+例如、他們會使用為資料庫建立的Volume範本、建立一個將用於Oracle資料庫的Volume。
+
+. 服務會使用儲存架構設計師所決定的「飄移」功能、追蹤範本中定義的特定資源設定。
+
+
+
+
+== 定價與授權
+
+應用程式範本功能不需授權、所有Cloud Manager使用者均可免費使用。
+
+
+NOTE: 範本可讓您將雲端服務套用至已建立的資源、例如在每個Volume上啟用Cloud Backup。在這種情況下、使用備份服務和備份檔案所使用的物件儲存空間都會有成本。
+
+
+
+== 限制
+
+* 任何Gov Cloud區域或沒有網際網路存取的站台均不支援AppTemplate服務。
+* 您無法使用範本在Cloud Volumes ONTAP 現有的Aggregate上建立一個流通量。新的磁碟區會建立在新的Aggregate中。
+

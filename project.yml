@@ -1,0 +1,95 @@
+---
+settings:
+  name: AppTemplate
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: 所有Cloud Manager文件
+    url: https://docs.netapp.com/us-en/cloud-manager-family
+  - title: 應用程式範本文件
+    url: "/index.html"
+  - title: 版本資訊
+    url: "/whats-new.html"
+  - title: 開始使用
+    entries:
+    - title: 深入瞭解AppTemplate
+      url: "/concept-resource-templates.html"
+    - title: 深入瞭解標記
+      url: "/concept-tagging.html"
+  - title: 使用應用程式範本
+    entries:
+    - title: 使用範本來標準化資源建立
+      entries:
+      - title: 為組織建置範本
+        url: "/task-define-templates.html"
+      - title: 檢查資源是否符合範本規範
+        url: "/task-check-template-compliance.html"
+      - title: 執行範本以建立資源
+        url: "/task-run-templates.html"
+    - title: 使用標記來組織資源
+      entries:
+      - title: 管理資源的標記
+        url: "/task-using-tags.html"
+  - title: 概念
+    entries:
+    - title: 範本建置區塊
+      url: "/reference-template-building-blocks.html"
+  - title: 知識與支援
+    entries:
+    - title: 註冊以取得支援
+      url: "/task-support-registration.html"
+    - title: 取得協助
+      url: "/task-get-help.html"
+  - title: 法律聲明
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 開始使用
+    links:
+    - title: 深入瞭解AppTemplate
+      url: concept-resource-templates.html
+    - title: 瞭解標記
+      url: concept-tagging.html
+    - title: 新增功能
+      url: whats-new.html
+  - title: 建立範本
+    links:
+    - title: 作業環境Cloud Volumes ONTAP
+      url: task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment
+    - title: 流通量Cloud Volumes ONTAP
+      url: task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-volume
+    - title: 流通量Azure NetApp Files
+      url: task-define-templates.html#create-a-template-for-an-azure-netapp-files-volume
+    - title: 內部部署ONTAP 的產品不只是功能
+      url: task-define-templates.html#create-a-template-for-an-on-premises-ontap-volume
+    - title: 新增備份、資料感應或複寫功能至磁碟區
+      url: task-define-templates.html#examples-of-enabling-services-using-templates
+  - title: 使用範本建立資源
+    links:
+    - title: 作業環境Cloud Volumes ONTAP
+      url: task-run-templates.html#select-and-run-a-working-environment-template
+    - title: CVO、內部部署和ANF的Volume
+      url: task-run-templates.html#select-and-run-a-volume-template
+  - title: 使用範本和標記來管理資源
+    links:
+    - title: 檢查資源是否符合範本規範（飄移）
+      url: task-check-template-compliance.html
+    - title: 執行可尋找現有資源的範本
+      url: task-run-templates.html#select-and-run-a-template-that-finds-existing-resources
+    - title: 管理資源的標記
+      url: task-using-tags.html
+  - title: 部落格社群
+    links:
+    - title: NetApp社群
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Cloud Central部落格
+      url: https://cloud.netapp.com/blog
+    - title: 雲端網路研討會
+      url: https://cloud.netapp.com/events
+product-family: {}

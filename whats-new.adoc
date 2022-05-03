@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes' 
+summary: 瞭解應用程式範本和標記的新功能。 
+---
+= 應用程式範本與標記的新功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+瞭解應用程式範本和標記的新功能。
+
+
+
+== 2022年3月3日
+
+
+
+=== 現在您可以建立範本來尋找特定的工作環境
+
+使用「尋找現有資源」動作、您可以識別工作環境、然後使用其他範本動作（例如建立磁碟區）、輕鬆在現有的工作環境中執行動作。 https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#examples-of-finding-existing-resources-and-enabling-services-using-templates["如需詳細資料、請前往此處"]。
+
+
+
+=== 能夠在Cloud Volumes ONTAP AWS中建立一個功能不只是功能不一的HA工作環境
+
+目前在Cloud Volumes ONTAP AWS中建立功能完善的環境、除了建立單一節點系統之外、還包括建立高可用度系統。 https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment["瞭解如何建立Cloud Volumes ONTAP 適用於各種作業環境的範本"]。
+
+
+
+== 2022年2月9日
+
+
+
+=== 現在、您可以建立範本來尋找特定的現有磁碟區、然後啟用Cloud Backup
+
+使用新的「尋找資源」動作、您可以識別要啟用Cloud Backup的所有磁碟區、然後使用Cloud Backup動作來啟用這些磁碟區上的備份。
+
+目前支援Cloud Volumes ONTAP 的是在內部部署ONTAP 的不支援系統上的大量資料。 https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#find-existing-volumes-and-activate-cloud-backup["如需詳細資料、請前往此處"]。
+
+
+
+== 2021年10月31日
+
+
+
+=== 現在您可以標記同步關係、以便將其分組或分類、以便輕鬆存取
+
+https://docs.netapp.com/us-en/cloud-manager-app-template/concept-tagging.html["深入瞭解資源標記"]。
+
+
+
+== 2021年10月11日
+
+
+
+=== 現在您可以建立現有範本的複本
+
+建立複本可節省大量時間、以便建立與現有範本非常類似的新範本。只要以新名稱製作複本、然後變更使範本獨一無二的兩個項目即可。 link:task-define-templates.html#make-a-copy-of-a-template["瞭解如何建立範本複本"]。
+
+
+
+=== 現在、在使用範本建立的磁碟區上啟用服務變得更簡單
+
+在您需要選取變數以識別工作環境、儲存VM和Volume名稱之前。現在範本會為您新增此資訊。如此可簡化新增雲端備份、雲端法規遵循及複寫服務至新建立的磁碟區的作業。
+
+
+
+=== 我們已新增支援功能、讓您可以標記特定的GCP資源
+
+現在您可以使用Cloud Manager標記服務來管理GCP資源上的標籤。您可以檢視已套用至資源的GCP標籤和標籤值、也可以將這些標籤套用至您所管理的其他GCP資源。 link:concept-tagging.html#resources-that-you-can-tag["請參閱您可以標示的GCP資源"]。
+
+
+
+== 2021年9月2日
+
+
+
+=== 現在您可以使用標記服務來管理Azure資源上的標記
+
+您可以檢視已套用至資源的Azure標記和標記值、也可以將這些標記套用至您所管理的其他Azure資源。 link:concept-tagging.html#resources-that-you-can-tag["查看您可以標記的Azure資源"]。
+
+
+
+=== 現在可以標記一些額外的AWS EC2資源
+
+
+
+== 2021年8月8日
+
+
+
+=== 現在您可以Cloud Volumes ONTAP 使用範本建立一個不只是功能的工作環境
+
+此支援目前僅提供給AWS環境、而且僅適用於單節點叢集。瞭解如何操作 link:task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment["建立Cloud Volumes ONTAP 一套適用於各種作業環境的範本"]。
+
+
+
+=== 新功能可讓您在Volume範本中新增標記至Volume
+
+標記可讓您將不同的資源分組、以識別應用程式、區域或部門、以便執行自動化或將成本分配給特定部門或區域。
+
+
+
+=== 現在您可以在Cloud Manager中管理AWS EC2執行個體的標記
+
+您可以檢視已套用至EC2執行個體的AWS標記和標記值、也可以將這些標記套用至您正在管理的其他EC2執行個體。 link:concept-tagging.html["深入瞭解標記"]。
+
+
+
+== 2021年7月13日
+
+
+
+=== 已新增支援以在定義範本時使用複寫服務
+
+現在您可以新增想要的範本 link:task-define-templates.html#add-replication-functionality-to-a-volume["複寫正在建立之磁碟區中的資料"] 至另一個使用的Volume https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["複寫服務"]。
+
+當您將資料複寫到其他NetApp儲存系統、並持續更新次要資料時、資料會保持最新狀態、並在需要時隨時保持可用。
+
+
+
+=== 從範本設定下載包含「磁碟區」的所有磁碟區報告
+
+如此一來、您就能識別這些磁碟區、並指派人員讓磁碟區恢復法規遵循狀態。請參閱 link:task-check-template-compliance.html#create-a-drift-report-for-non-compliant-resources["如何下載您的偏移報告"]。
+
+
+
+=== 新推出的標記服務
+
+全新Cloud Manager功能可讓您將標記套用至現有ONTAP 的支援資源、以協助組織及管理這些資源。標記是中繼資料、可用來將資源分組、以識別應用程式、環境、地區、帳單代碼、雲端供應商、 以及更多資訊。
+
+link:concept-tagging.html["深入瞭解標記"]。
+
+
+
+== 2021年6月7日
+
+
+
+=== 現在、您可以在使用者執行範本時、有條件地啟用某些動作
+
+例如Cloud Volumes ONTAP 、如果在啟用NetApp儲存效率的情況下建立了一個支援功能區、則該磁碟區也會啟用Cloud Backup。如果未啟用儲存效率、則不會啟用Cloud Backup。
+
+
+
+=== 您現在可以ONTAP 使用範本、在內部部署的系統上建立Volume
+
+應用程式範本可讓您使用範本在現有工作環境上建立磁碟區。
+
+
+
+=== 在建立範本時、新增了稱為「飄移」的功能作為選項
+
+此功能可讓Cloud Manager監控您在範本中輸入的參數硬編碼值。儲存管理員使用該範本建立磁碟區之後、如果Cloud Manager稍後發現參數值已變更、使其不再符合範本定義、您可以從設計的範本中看到所有「磁碟區」。如此一來、您就能識別這些磁碟區並進行變更、使其恢復法規遵循狀態。
+
+
+
+== 2021年5月2日
+
+
+
+=== 現在您可以在建立Volume範本時整合Cloud Data Sense
+
+現在、您可以針對每個新建立的磁碟區啟用Data Sense、或為每個新建立的磁碟區啟用Cloud Backup、或是在建立的磁碟區上建立啟用Backup和Compliance的範本。

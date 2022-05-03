@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="98af7a1c0ade78de5b8dcbfc4ca16024" category="summary">AppTemplate服務可讓您標準化Cloud Manager工作環境的資源建立。</block>
+  <block id="91ee6aa91810fc059d494948432212cc" category="doc">應用程式範本文件</block>
+  <block id="ea71cf04f7239c133ac6882358bee38e" category="summary">您可以使用Cloud Manager標記服務來檢視、新增、修改及刪除指派給現有資源的標記。這可讓您組織及簡化資源管理。</block>
+  <block id="9b07b7a435eb3748887ec84eac33cf64" category="doc">管理資源的標記</block>
+  <block id="f02ce38105e0bd4e1492a696a42fc111" category="section-title">搜尋具有特定標記的資源</block>
+  <block id="572b98a402ed12dbaca0370b0814a61c" category="paragraph">如果您想要查看具有特定標記或特定標記和標記索引鍵值的所有資源、您可以搜尋這些標記。您可以搜尋所有資源、或只搜尋特定資源類別。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
+  <block id="d021504cd210ca3c99557d4026f93fe9" category="list-text">選取「*應用程式範本*」服務、然後按一下「*標記*」索引標籤。</block>
+  <block id="8a4ccdfb1d164c3e3a6da2758ea59afa" category="list-text">如有必要、請在* Select認證*欄位中選擇特定雲端供應商的認證資料。</block>
+  <block id="f58ddfd9537b922f14de15f169e66a44" category="list-text">在「資源類型_」欄位中、選取資源、例如* ONTAP：CVO：Volume *、以搜尋所有Cloud Volumes ONTAP 的各個版本。</block>
+  <block id="55048905cb51ad2998c06b578a1e485e" category="list-text">在_Tag Key_欄位中、選取標籤、例如* Env*、將搜尋範圍限制在含有「Env」標籤的磁碟區。</block>
+  <block id="57adb397c0fe3b63204853bc9186e49e" category="list-text">在_標記值_欄位中、選取關鍵值、例如*正式作業*、將搜尋範圍限制在標記名稱為「Env」、標記值為「正式作業」的磁碟區。</block>
+  <block id="6b02683fa96542dc90cc0d413eec17d1" category="inline-image-macro">選取一組搜尋條件以傳回具有特定標記索引鍵和標記值的資源的快照。</block>
+  <block id="901753ca5c92cd91b11940a9fac8569a" category="paragraph"><block ref="901753ca5c92cd91b11940a9fac8569a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-image-macro"></block>
+  <block id="03e94c53a1f4fdaa62202db4528531d6" category="list-text">按一下 <block ref="3fd7363714f2e2423924118bfd6b7147" category="inline-image-macro-rx" type="image"></block> 可將此搜尋條件新增至「搜尋」區域。</block>
+  <block id="f0586e3a2b694cbeec93e35dd7f9e28e" category="inline-image-macro">新增至搜尋行的標記搜尋條件快照。</block>
+  <block id="05f475f79d5cf10dced9154d17d0b41c" category="paragraph"><block ref="05f475f79d5cf10dced9154d17d0b41c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="604b0f66d5091b97f5e89f0d8da1d314" category="list-text">如果您已完成搜尋、請按一下*搜尋*、搜尋結果就會出現在「資源」區段中。</block>
+  <block id="88248f0ac65beba333e31aa507b13202" category="inline-image-macro">符合標記搜尋條件之資源的結果快照。</block>
+  <block id="3e5ec3afb8a45d440659ebaabc265963" category="paragraph"><block ref="3e5ec3afb8a45d440659ebaabc265963" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fb5a5dce727f3d71f986467d11667dcb" category="paragraph">如果您要新增其他搜尋條件、請再次依照步驟3到6執行、然後按一下*搜尋*。</block>
+  <block id="a6e513182fed1ef73b8c8b9327893161" category="section-title">搜尋規則</block>
+  <block id="b01996a98368a45c3a5d4d8738338eae" category="paragraph">定義搜尋時、適用下列規則：</block>
+  <block id="c3bdabf571c3082715580eb6be3e2ca2" category="list-text">選擇資源類型之後、如果您想要列出所有具有任何金鑰和任何金鑰值的資源、可以將「標記金鑰」欄位和「標記值」欄位保留空白。</block>
+  <block id="f9b300b7e39032247e57d7ad64986d1d" category="list-text">您可以選擇單一搜尋、也可以定義多個搜尋、以精簡資源區段中的結果。</block>
+  <block id="659ca7552f6a8fe6a78aea2256b3c46f" category="list-text">定義多組搜尋條件時：</block>
+  <block id="1545b6e4202e3be562a850752e48b452" category="list-text">如果兩項搜尋的準則是針對不同的資源類型、則這項作業會視為「OR」作業、結果會顯示兩項搜尋中的資源。例如、下列搜尋會傳回Azure NetApp Files 所有具有「Environment:demo」標記值的所有功能區、以及Cloud Volumes ONTAP 所有具有「Environment:demo」標記值的功能區。</block>
+  <block id="9213e2140560ed1d8608498467b31c23" category="paragraph"><block ref="9213e2140560ed1d8608498467b31c23" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bbaf8508cb8ab19b7d4c993760f453ae" category="list-text">如果兩次搜尋的準則是針對相同的資源類型、則會將其視為「and」（和）作業、結果只會顯示符合*二者*搜尋的資源。例如、下列搜尋會傳回Azure NetApp Files 包含「Environment:demo」標記值和「Group:Finances」標記值的支援資料。</block>
+  <block id="8ae0853ee1ff58fc47451430f34aa261" category="paragraph"><block ref="8ae0853ee1ff58fc47451430f34aa261" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1e76587827a2c444b42731f500f5f7b9" category="list-text">如果您已定義多個搜尋條件、然後決定要移除一個、只要按一下即可 <block ref="45d4efe5d85352e2c35a12e8ace91564" category="inline-image-macro-rx" type="image"></block> 可將其從搜尋區域中移除。</block>
+  <block id="79eb09e7fc546bf99c72cd7650e9fbb4" category="section-title">新增標記至現有資源</block>
+  <block id="3e44cde650bf6f59b09127a99de693cc" category="paragraph">您可以將標記套用至單一資源或多個資源。這些資源可能有現有的標記、或沒有目前的標記。</block>
+  <block id="4b6fca08a3864d4de4c51a0388dbf758" category="inline-link-macro">請參閱目前可標記的資源清單。</block>
+  <block id="77d77a7d08e31270683303811b271c71" category="paragraph"><block ref="77d77a7d08e31270683303811b271c71" category="inline-link-macro-rx"></block></block>
+  <block id="0625a37343409c38dad5c4f59fbd1548" category="list-text">在* Tags*（標記*）標籤中、建立您的搜尋條件、然後按一下*搜尋*。</block>
+  <block id="073ac7d814e9437e4970cec883c2f383" category="list-text">選取您要標記的資源。</block>
+  <block id="527c3932c7cf0390db001df885ea8f28" category="list-text">若要選取頁面上的所有資源、請勾選標題列中的方塊（<block ref="b0be32365b13649b2a4ad63a5c5db9d7" category="inline-image-macro-rx" type="image"></block>）。</block>
+  <block id="af03b66389cfbec8c481c73a89728046" category="list-text">若要選取多個資源、請核取每個資源的方塊（<block ref="f3b0afa317fb06ade03449dd632d08e0" category="inline-image-macro-rx" type="image"></block>）。</block>
+  <block id="daa7684c9693e9b5412a05c7d060a1ef" category="inline-image-macro">加號按鈕</block>
+  <block id="cb5c297ef8dc3fe424475fa62b79e3e8" category="list-text">若要選取單一資源、請按一下 <block ref="e7e0e095d9ce72479b1102c3b9ff5a5b" category="inline-image-macro-rx" type="image"></block> 資源的圖示。</block>
+  <block id="cff1dfada6d6b7b98fd30ee02a0d1db9" category="inline-image-macro">顯示如何選取單一資源、多個資源或所有資源的快照。</block>
+  <block id="b57ec2fd08f04b37b6a4067b53b493c2" category="paragraph"><block ref="b57ec2fd08f04b37b6a4067b53b493c2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="953499073a80db33d37fc0e65d574cd3" category="list-text">按一下*管理標記*、就會出現_資源標記_對話方塊。任何現有的標記都會顯示在此對話方塊中。</block>
+  <block id="6628e1b5975a42c2be2ff5186caf860c" category="inline-image-macro">螢幕擷取畫面會顯示資源標記對話方塊、您可在此檢視目前指派的標記並新增標記。</block>
+  <block id="9a25b58325689888cd22d9f62778dd88" category="paragraph"><block ref="9a25b58325689888cd22d9f62778dd88" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1fb12afa3bbd8081db730626d9cf128e" category="list-text">按一下「*新增標籤*」、對話方塊中會出現空白的「標籤金鑰與標籤值」列。</block>
+  <block id="c69b390a7a1622a148e2febd4ca307bf" category="list-text">輸入標籤機碼和標籤值。如果您想要在此資源上新增更多標記、請現在新增更多標記、然後按一下*「檢閱並套用*」。</block>
+  <block id="fb8530a1e792fa11ae22927c4489794a" category="list-text">如果您在_檢閱_頁面中的變更看起來正確、請按一下*儲存*、新的標記就會新增至資源或所有選取的資源。</block>
+  <block id="55b2371e859e7dd661d62883c0e93f48" category="section-title">變更資源的標記值</block>
+  <block id="8500d002f3036b9ac76b10f3975fa5b6" category="paragraph">您可以變更指派給資源的標記、也可以變更套用至現有標記的標記值。</block>
+  <block id="c6d44c78dac6303ee6c3d0525ffa451c" category="list-text">選取您要變更標記的資源。</block>
+  <block id="96be093270f8207adaa28aaa45ee837b" category="list-text">按一下*管理標記*、就會出現_資源標記_對話方塊。</block>
+  <block id="1400af94919e7ee1a09ca726e8b85d80" category="inline-image-macro">顯示如何從資源或多個資源修改標記的快照。</block>
+  <block id="ad331f4f30c579537be3c11e0e0dc081" category="paragraph"><block ref="ad331f4f30c579537be3c11e0e0dc081" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac9723812108c87763a081c3ff4f1c08" category="list-text">輸入標記值的新值、然後按一下「*檢閱並套用*」。</block>
+  <block id="4cb2f4e76ebfa58ef36c58684a15abd0" category="list-text">如果您在_檢閱_頁面中的變更看起來正確、請按一下*儲存*、然後變更資源或所有選取資源的標記值。</block>
+  <block id="06b4175113796fd327444f906e00e5b0" category="section-title">刪除資源中的標記</block>
+  <block id="a3b429240e21705b5497678d9a1a450d" category="paragraph">您可以從單一資源或多個資源中刪除標記金鑰/值配對。</block>
+  <block id="442b989d73b53c1398a30d27048bd411" category="list-text">選取您要移除標記的資源。</block>
+  <block id="25aa36d137bcf84c1df93b9abee71af1" category="inline-image-macro">顯示如何從資源或多個資源刪除標記的快照。</block>
+  <block id="01c2aeb5ca936bbe9aa0ad9699706a64" category="paragraph"><block ref="01c2aeb5ca936bbe9aa0ad9699706a64" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c2b9a18179af322bffbbd1fc093f0e6a" category="list-text">按一下 <block ref="ccf4df3a8e9a80d7b6ff904049041296" category="inline-image-macro-rx" type="image"></block> 針對您要刪除的標記金鑰/值配對、並移除該列、然後按一下*「Review and Apply *（檢閱並套用*）」。</block>
+  <block id="6f195138d995bb3980eb20df6cd6b372" category="list-text">如果您在_檢閱_頁面中的變更看起來正確、請按一下*儲存*、標記金鑰/值配對就會從資源或所有選取的資源中移除。</block>
+  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp以多種方式支援Cloud Manager。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">取得協助</block>
+  <block id="51719eefc68685ac0e2a11057a44b8be" category="paragraph">NetApp以多種方式支援Cloud Manager及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">自我支援</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項可供免費使用、一天24小時、一週7天：</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
+  <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
+  <block id="76b571fb5edea1c1994fa0ff01f7b1e2" category="paragraph">請搜尋Cloud Manager知識庫、找出有助於疑難排解問題的文章。</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社群</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7f3490343cad8dc3bfdb72dd5d957e8d" category="paragraph">加入Cloud Manager社群、追蹤後續討論或建立新討論。</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
+  <block id="3c313458d6e15dd2c4336e47118d0a8f" category="paragraph">您目前正在檢視的Cloud Manager文件。</block>
+  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto：ng-cloudmanager-feedback@netapp.com [意見反應電子郵件]</block>
+  <block id="bff60abbc46aceed0f73a3a4f6cfb123" category="paragraph">我們非常重視您的意見。提交意見反應、協助我們改善Cloud Manager。</block>
+  <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp支援</block>
+  <block id="c91b5a63849b8d2db01014ed33192735" category="paragraph">除了上述的自我支援選項、您也可以與NetApp支援工程師合作、在您啟動支援之後解決任何問題。</block>
+  <block id="6c08c57e382a25a778455184cd9b1a4a" category="list-text">在Cloud Manager中、按一下*「說明」&gt;「支援」*。</block>
+  <block id="f5052c65917d7341726235d4d4941461" category="list-text">在「Technical Support（技術支援）」下選擇可用的選項之一：</block>
+  <block id="bece28b158ab337d9ed24b00d7d02cc7" category="list-text">按一下*致電我們*以尋找NetApp技術支援的電話號碼。</block>
+  <block id="efe81cff8e6f47ec59ef94167b76bf5a" category="list-text">按一下「*開啟問題*」、選取其中一個選項、然後按一下「*傳送*」。</block>
+  <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">NetApp代表將審查您的案例、並盡快回覆您。</block>
+  <block id="cc371045494864a1be09aecf8486813b" category="summary">選取NetApp提供的一或多個「行動」、然後快速建立應用程式範本、讓貴組織開始最佳化資源的建立。</block>
+  <block id="7b7aa0d4bd1d1332a50f445e21889bc8" category="doc">為組織建置應用程式範本</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="section-title">快速入門</block>
+  <block id="91e06e9a9ef97681b798e2e5e007ba97" category="paragraph">請依照下列步驟快速入門、或向下捲動至其餘部分以取得完整詳細資料。</block>
+  <block id="a6a9590c22384e37e4e414bf579a3278" category="list-title">span class="image"&gt;&lt;imgrc=<block ref="0c3becc25d95e48b9ca863002a042824" category="inline-link-rx"></block> alt="1"&gt;&lt;/span&gt;請確認必要的先決條件</block>
+  <block id="53eecd7f53fddfec88f1dbaf29600d72" category="list-text">在使用Cloud Volumes ONTAP 者使用ONTAP 範本建立一個適用於內部部署的功能完善的功能區之前、Azure NetApp Files 請先確認他們能夠存取適當的工作環境、以便部署Volume。</block>
+  <block id="dad57e95fc9a5390302ad830888cbdb9" category="inline-link">雲端備份</block>
+  <block id="d882bf73cd5caf1e5aa39edbf893ad74" category="inline-link">雲端資料感測</block>
+  <block id="45ebff704e28730c0e631bb5f09b2205" category="list-text">如果您計畫將雲端服務「行動」新增至範本、例如<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 或<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>，確保服務在您的環境中處於活動狀態並獲得許可。</block>
+  <block id="42ad9e938d3f22547c490ccfc69261fe" category="paragraph">選取*應用程式範本*服務、按一下*編輯器*索引標籤、然後選取您要在範本中使用的動作。</block>
+  <block id="ba13d007a4f76ded358c0280157f648b" category="paragraph">請遵循建立步驟、並定義範本將執行的動作。</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">需求</block>
+  <block id="4b09bdd4ca435f6a4b77b142f9481573" category="paragraph">請閱讀下列要求、確認您擁有支援的組態。</block>
+  <block id="23e0e07c56fc07b2d6bc44d30e5187d4" category="inline-link">瞭解如何建立連接器</block>
+  <block id="880e0da9ea31d472fa96b1ad7e4be6ad" category="list-text">如果您還沒有連接器、<block ref="0e90a2191f59a8f46190195b37c75156" category="inline-link-rx"></block> 適用於AWS、Azure和GCP。</block>
+  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="inline-link">AWS</block>
+  <block id="3a580f142203677f1f0bc30898f63f53" category="inline-link">Azure</block>
+  <block id="c731f72e1d22a7c5e01a7cb789a8885e" category="inline-link">GCP</block>
+  <block id="45ef42d49d3545c2dc4c85b1084a47e4" category="list-text">建立Cloud Volumes ONTAP 一個功能不全的範本時、請務必Cloud Volumes ONTAP 為使用者提供一個功能不全的工作環境。瞭解如何在中啟動Cloud Volumes ONTAP 一套功能完善的系統<block ref="9d7ce7d64938e2f7608d2bb2edf0463c" category="inline-link-rx"></block>、<block ref="24f9dba5182403aa08072eb715753c19" category="inline-link-rx"></block>或<block ref="50ded4108906004e3a51ae63e78f7f8d" category="inline-link-rx"></block>。</block>
+  <block id="b927c65793ede8840d859f745c1070b4" category="inline-link">探索內部部署ONTAP 的解決方案</block>
+  <block id="c8901a7a496874759b4b8b60b0de5c3d" category="list-text">建立內部部署ONTAP 的Sfor Volume範本時、請務必為ONTAP 使用者提供內部部署的可視環境。瞭解如何操作<block ref="73a5fece0c926f1d97e300f9e1e63b86" category="inline-link-rx"></block> 在Cloud Manager中。</block>
+  <block id="89bbeb90a25e5540f1875c6148fc07a6" category="inline-link">打造Azure NetApp Files 一個不一樣的工作環境</block>
+  <block id="fb68c4d66bb3415869da179d1c3cca51" category="list-text">建立Azure NetApp Files 一個功能不全的範本時、請務必為Azure NetApp Files 使用者提供一個功能不全的工作環境。瞭解如何操作<block ref="476f1ab3b7492b38993b3c305f1332d8" category="inline-link-rx"></block> 在Cloud Manager中。</block>
+  <block id="e6ed2b3f4bf8b70c7dffd440bfa20748" category="list-text">如果您打算使用Cloud Backup在範本中備份磁碟區、請確定您的環境已啟動Cloud Backup。</block>
+  <block id="375fb9ecf54511eed57c23439aba8fa9" category="list-text">如果您打算使用Cloud Data Sense掃描範本中的磁碟區、請確定您的環境已啟動Cloud Data Sense。</block>
+  <block id="b2db245c1e7b0de62f61003787ba3eb2" category="list-text">如果您計畫在範本中啟用複寫、且範本用於內部部署ONTAP 的SnapMirror Volume、ONTAP 則該叢集必須具有作用中的SnapMirror授權。</block>
+  <block id="ec83027c05d71f4e7343616a10e8b48e" category="section-title">使用範本建立資源的範例</block>
+  <block id="54efaa09fa271348667d3925486f25d8" category="paragraph">資源範本可讓您建立新的Volume或全新Cloud Volumes ONTAP 的功能區環境。</block>
+  <block id="030a036b48378de1f3003036be2d3597" category="section-title">建立Cloud Volumes ONTAP 一個範本、以供作一份不全版的範本</block>
+  <block id="ab93b13353c035a51f382bda0bfbed96" category="inline-link">如何配置Cloud Volumes ONTAP 功能不均</block>
+  <block id="821f9fc7a9c5e046eb762a4d185a08f7" category="paragraph">請參閱<block ref="154a2016582f1d0d3d1ef7ccb4cc4af7" category="inline-link-rx"></block> 如需Cloud Volumes ONTAP 有關您需要在《關於我們的資料與資料的資料、請參閱《關於我們的資料與資料的資料、</block>
+  <block id="e9e4c331008e320c9b03b119f438ec84" category="paragraph">在此範例中、我們將建立名為「資料庫的CVO Volume」的範本、並包含下列2項動作：</block>
+  <block id="6115c1aa690e31fcf33eef72f8accb32" category="list-text">建立Cloud Volumes ONTAP 本系統的功能</block>
+  <block id="4611422bf9a4ff570849e7d651f9c0a2" category="paragraph">建立AWS環境的磁碟區、設定100 GB的儲存空間、將Snapshot原則設為「預設」、並啟用儲存效率。</block>
+  <block id="d0285b972453920d44e9bfc537f86825" category="list-text">啟用雲端備份</block>
+  <block id="0e7b1101bfe909f1f24d1bc082d8cb0b" category="paragraph">建立每天30次、每週13次和每月3次的備份（使用_3個月Retention _原則）。</block>
+  <block id="e4b455f83d8a2cbf227e5a6b6bd7ed8c" category="list-text">選取*應用程式範本*服務、按一下*範本*索引標籤、然後按一下*新增範本*。</block>
+  <block id="12800accdcea8213a17428d96d3f650b" category="paragraph">此時會顯示「_Select_a Template」頁面。</block>
+  <block id="ac454ecfe801e40640fcab274d8376c7" category="inline-image-macro">螢幕快照顯示如何選取要使用此範本執行的主要動作。</block>
+  <block id="badf0b64af7e4dbccc924f1b86d16441" category="paragraph"><block ref="badf0b64af7e4dbccc924f1b86d16441" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e9d6286a0d87815f2dfb97a9d19be924" category="list-text">選擇* Volume for Cloud Volumes ONTAP Sfing+ Backup *作為您要建立的資源類型、然後按一下* Get starting*。</block>
+  <block id="2e40b56b7fa804a6923caf652b7c25aa" category="paragraph">畫面會顯示「_在Cloud Volumes ONTAP 不執行動作時建立Volume定義_」頁面。</block>
+  <block id="99d5fcac810e0357f1ce55dabd9aadfd" category="inline-image-macro">螢幕快照顯示您需要填寫的空白CVO範本。</block>
+  <block id="c300df2aa9b635b7e59061b7084d3807" category="paragraph"><block ref="c300df2aa9b635b7e59061b7084d3807" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="801e9079b48c523d52a05513463997fe" category="list-text">*行動名稱*：選擇性地輸入自訂的行動名稱、而非預設值。</block>
+  <block id="7cbfd40e0aecc60c4a4efbc45ba21139" category="list-text">*內容：*輸入Cloud Volumes ONTAP 不必要的作業環境內容。</block>
+  <block id="059515978a375903c4b939adacaa923b" category="paragraph">當使用者從現有的工作環境啟動範本時、系統會自動填入此資訊。</block>
+  <block id="9723c14ceead0bcb4a1db0b77671f08a" category="paragraph">當使用者從「範本儀表板」（而非工作環境內容）啟動範本時、他們需要選取要建立磁碟區的工作環境和SVM。這就是為什麼這些欄位會標示為「可編輯」的原因。</block>
+  <block id="5ea98d0d0acbef5bd9f5c07ca7a061be" category="list-text">*詳細資料：*輸入磁碟區名稱和大小。</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">欄位</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">說明</block>
+  <block id="5a33fdd3ad048388d676b3cfe62a76b4" category="cell">Volume名稱</block>
+  <block id="2883dfc230f7a5fee0fceab3e724eed1" category="cell">按一下欄位、然後選取5個選項之一。您可以選擇*任意文字*、讓管理員輸入任何名稱、或是指定Volume名稱必須有特定的字首或字尾、_包含_特定字元、或是遵循您輸入之規則運算式（regex）的規則。例如、您可以指定「db」為必要的字首、字尾或包含；要求使用者新增磁碟區名稱、例如「db_vol1」、「vol1_db」或「vol_db_1」。</block>
+  <block id="191fac23c2b2ea4e948178972521292f" category="cell">Volume大小</block>
+  <block id="00c8763f564b8663e70d7c5282bfb116" category="cell">您可以指定允許的值範圍、也可以指定固定大小。此值以GB為單位。在我們的範例中、我們可以新增固定值* 100*。</block>
+  <block id="189f63f277cd73395561651753563065" category="cell">標記</block>
+  <block id="5c383dfd487b893537243d1ff2b9c575" category="cell">針對您要與此Volume建立關聯的標記、輸入名稱和值配對。例如、您可以新增「成本中心」做為標記名稱、並將成本中心代碼「6655829」做為值。您可以新增更多標記名稱和值配對、將多個標記與Volume建立關聯。</block>
+  <block id="8cb0ac47c325f07198a8d894befe84b4" category="list-text">*保護：*選擇此磁碟區是否會透過選取「預設」或其他原則來建立Snapshot複本、如果您不想建立Snapshot複本、請選擇「無」。</block>
+  <block id="14e9a0afe9a24320a6cbef6a736df90e" category="list-text">*使用率設定檔：*選擇是否將NetApp儲存效率功能套用至磁碟區。這包括精簡配置、重複資料刪除和壓縮。例如、維持儲存效率。</block>
+  <block id="9a58906a5890a61a2ba00a2bc5f6a847" category="list-text">*磁碟類型：*選擇雲端儲存設備供應商及磁碟類型。對於某些磁碟選擇、您也可以選取最小和最大IOPS或處理量（MB/s）值、基本上定義特定的服務品質（QoS）。</block>
+  <block id="8a199052157229eefe6d69b9e724047a" category="list-text">*傳輸協定選項：*選取* NFS*或* SMB*以設定磁碟區的傳輸協定。然後提供傳輸協定詳細資料。</block>
+  <block id="5dc73c128ec631156d8581bb645e55cc" category="cell">NFS欄位</block>
+  <block id="8aaaedc342a0dce1d73d33f3fb69a2af" category="cell">存取控制</block>
+  <block id="4a3d2f4e3aa9bd79e413c5b9fa744ab3" category="cell">選擇是否需要存取控制來存取磁碟區。</block>
+  <block id="8dadce9de6b5f104b9f1990b73f191f0" category="cell">匯出原則</block>
+  <block id="565e7c939f0a1769928e7ea0649f804b" category="cell">建立匯出原則、以定義子網路中可存取磁碟區的用戶端。</block>
+  <block id="97e382ecf7e6f1064476764cbcc5b429" category="cell">NFS版本</block>
+  <block id="7d357e387e1a68e43d79ca61a0b67fb9" category="cell">選取Volume的NFS版本：_NFSv3_或_NFSv4_、或兩者皆可選取。</block>
+  <block id="ba1dcdd66cd4d8a61910f9d39950817a" category="cell">SMB欄位</block>
+  <block id="d30b23c0886d5712f5995a7793376942" category="cell">共用名稱</block>
+  <block id="6e94b2e72c0376574fc6b13ca0384876" category="cell">按一下欄位、然後選取5個選項之一。您可以讓管理員輸入任何名稱（自由文字）、或是指定共用名稱必須具有特定的字首或字尾、包含_特定字元、或是遵循您輸入之規則運算式（regex）的規則。</block>
+  <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="cell">權限</block>
+  <block id="81075cbf19436268ea82309abe5e2fbf" category="cell">選取使用者和群組共用的存取層級（也稱為存取控制清單或ACL）。</block>
+  <block id="3d0a35be70eebb15d947ea1010db1320" category="cell">使用者/群組</block>
+  <block id="ea73180f9c8cb441163847f36b7e315b" category="cell">指定本機或網域Windows使用者或群組、或UNIX使用者或群組。如果您指定網域 Windows 使用者名稱、則必須使用網域 \ 使用者名稱格式來包含使用者的網域。</block>
+  <block id="979ea4704bcee326b5ea5d2bc6a4a89b" category="list-text">*分層：*選擇您要套用至磁碟區的分層原則、或是如果您不想將冷資料從這個磁碟區分層至物件儲存設備、請將此原則設為「無」。</block>
+  <block id="e8ef245792950f46479876f766e2e142" category="inline-link">Volume分層原則</block>
+  <block id="b0e17b25c2ac5fdfcde0ef543eb85101" category="inline-link">將非作用中資料分層至物件儲存設備</block>
+  <block id="ee33f204180d62cfb217e1aec2a2f775" category="paragraph">請參閱<block ref="51ba3de2fe0f2a8abd8380ab98f33811" category="inline-link-rx"></block> 如需概觀、請參閱<block ref="d98e4cd2c7e92258651d80578af83733" category="inline-link-rx"></block> 確保您的環境已設定為分層。</block>
+  <block id="dcbae1cdee8a3f08d129ff3de6884125" category="list-text">定義此動作所需的參數後、請按一下「*套用*」。</block>
+  <block id="7566e7b2ebc49252e3a55e0d5dd8d796" category="paragraph">如果範本值已正確完成、「Create Volume in Cloud Volumes ONTAP the報價」（建立Volume in the報價）方塊中會新增綠色勾號。</block>
+  <block id="edabbad74c4bab7275b00df22d1795fb" category="list-text">按一下「在Volume上啟用雲端備份」方塊、隨即顯示「在Volume Action Definition_上啟用雲端備份」對話方塊、以便您填寫Cloud Backup詳細資料。</block>
+  <block id="e7b2940e4c4ae2261e85a3d7a22c8cb5" category="inline-image-macro">快照顯示可新增至所建立Volume的其他動作。</block>
+  <block id="1d52e1ed02fe4b810c04939e74af1f18" category="paragraph"><block ref="1d52e1ed02fe4b810c04939e74af1f18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f558391a06df755ed33bfad6325d0441" category="list-text">選取* 3個月保留*備份原則、以建立30個每日、13個週和3個月的備份。</block>
+  <block id="ee90c4ccb63dcb129be28139926904d8" category="inline-link-macro">如何填寫這些欄位</block>
+  <block id="102438db076a8d87db11f71b80bc5d27" category="list-text">在「工作環境」和「Volume Name（Volume名稱）」欄位下方、有三個選項可用來指出哪些磁碟區已啟用備份。請參閱 <block ref="0f494e6e7e9db827f82823d25be045fa" category="inline-link-macro-rx"></block>。</block>
+  <block id="0728b4f74021dc704fab300222094c8b" category="list-text">按一下「*套用*」、雲端備份對話方塊即會儲存。</block>
+  <block id="46725495896c458f104f504d53b4b320" category="list-text">在左上方輸入資料庫*的範本名稱* CVO Volume（例如）。</block>
+  <block id="d69be6c531037f06436630d128988a41" category="list-text">按一下*「設定與飄移*」以提供更詳細的說明、以便將此範本與其他類似的範本區分開來、以便啟用整體範本的「飄移」功能、然後按一下*「套用*」。</block>
+  <block id="7d1cada9a49f8783660b223f3fef2678" category="paragraph">建立此範本時、Cloud Manager可監控您輸入的參數硬編碼值。</block>
+  <block id="069cf34ab6ca64e85728193a5aab0a4e" category="list-text">按一下*儲存範本*。</block>
+  <block id="8b8745414ffb4d1bc70671bfa839ed7d" category="paragraph">範本隨即建立、並返回範本儀表板、以顯示新範本。</block>
+  <block id="5e0cbbeb0c7fbcd015cc8264aa380cf6" category="inline-xref">您應該告訴使用者哪些範本</block>
+  <block id="0a45425eb0911358963a7a4da437beeb" category="paragraph">請參閱 <block ref="2fb234aaf0c174d8c17b6003cc9fc11d" category="inline-xref-macro-rx"></block>。</block>
+  <block id="0723f0287083e700309ab63bd37a0c33" category="section-title">建立Azure NetApp Files 一個範本以供利用</block>
+  <block id="38c68ceb833297ed3631cc6cc44141ab" category="paragraph">建立Azure NetApp Files 一套範本以建立Cloud Volumes ONTAP 一套範本的方式來建立一個適用於整個過程的範本。</block>
+  <block id="98165316f4a6a7eb3b2eea00a7c71656" category="inline-link">如何配置Azure NetApp Files 功能不均</block>
+  <block id="1dcec9f35c7e20c4011388d6173a9a3e" category="paragraph">請參閱<block ref="71642e13367a6341a10e13f459821e6e" category="inline-link-rx"></block> 如需在ANF Volume範本中完成所有必要參數的詳細資料、</block>
+  <block id="31ea9a5156da1667ca8c913660cb04e8" category="paragraph"><block ref="31ea9a5156da1667ca8c913660cb04e8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1198c02b1425b74b6391ffd99cbc74b" category="list-text">選擇*空白範本*、然後按一下*入門*。</block>
+  <block id="ddc839fd59d3af096b5f24caa0aac73e" category="list-text">選擇*在Azure NetApp Files Sing*中建立Volume作為您要建立的資源類型、然後按一下*套用*。</block>
+  <block id="d7f05890785a6be968f73b8eaead7a27" category="paragraph">畫面會顯示「_在Azure NetApp Files 不執行動作時建立Volume定義_」頁面。</block>
+  <block id="d64e3f9a180b7c834241b44a88d16f4d" category="inline-image-macro">螢幕快照顯示您需要填寫的空白ANF範本。</block>
+  <block id="bea9505dd83d12b3dd7397d8682eb37b" category="paragraph"><block ref="bea9505dd83d12b3dd7397d8682eb37b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="09ff1b3fa74cf72dc0a62eaa7242effd" category="list-text">* Volume Details（磁碟區詳細資料）：*輸入磁碟區名稱和大小、並選擇性地指定磁碟區的標記。</block>
+  <block id="c44953330b995fcda50e59d40ea3a049" category="cell">您可以指定允許的值範圍、也可以指定固定大小。此值以GB為單位。</block>
+  <block id="f727b1e918e496981ef541497e02f03e" category="list-text">*傳輸協定：*選取* NFSv3*、* NFSv4.1*或* SMB*來設定磁碟區的傳輸協定。然後提供傳輸協定詳細資料。</block>
+  <block id="cb4d2c1623299b4c2878da3019af962f" category="cell">Volume路徑</block>
+  <block id="377c42289584cc56d1ca3a47af882648" category="cell">選取5個選項之一。您可以選擇*任意文字*讓管理員輸入任何路徑、或是指定路徑名稱必須有特定的字首或字尾、包含_特定字元、或是遵循您輸入之規則運算式（regex）的規則。</block>
+  <block id="9f669007b0241e85f918bbf51c094ed1" category="cell">匯出原則規則</block>
+  <block id="bcccd81c3a412f1013995a215560e6f4" category="list-text">*內容：*輸入Azure NetApp Files 此功能的運作環境、新Azure NetApp Files 增或現有的版本資訊、以及其他詳細資料。</block>
+  <block id="68049d5b86773fa123aee6b5162b46ba" category="cell">工作環境</block>
+  <block id="66618d802ff15f9772bf7cabf1ccccd5" category="cell">當儲存管理員使用者從現有的工作環境啟動範本時、系統會自動填入此資訊。當使用者從「範本儀表板」（而非工作環境內容）啟動範本時、他們需要選取要建立磁碟區的工作環境。</block>
+  <block id="baac6f97c8e7e8e6270cc894e6bdbe8c" category="cell">NetApp帳戶名稱</block>
+  <block id="32fe392abad2a40de341773cc015c9ed" category="cell">輸入您要用於帳戶的名稱。</block>
+  <block id="5094b7a12b4988ad4d43027cff543c44" category="cell">Azure訂閱ID</block>
+  <block id="9d50dad1baec8117f193564ab3e971b7" category="cell">輸入Azure訂閱ID。此為完整ID格式、類似於「2b04f26-7de6-42eb-9234-e2903d7s327」。</block>
+  <block id="f447ac856e7e72435904956e3b15f433" category="cell">區域</block>
+  <block id="bc24e6fad764484fb6365689ca4d656e" category="inline-link">內部區域名稱</block>
+  <block id="db11e34ee53f07b67134b18d34ea5869" category="cell">使用輸入區域<block ref="982c814c46363bccb479e928a36b737e" category="inline-link-rx"></block>。</block>
+  <block id="a35ce6a7b02cbfd98e9837032a457dd5" category="cell">資源群組名稱</block>
+  <block id="01652266b6c049dc9e680639d9932631" category="cell">輸入您要使用的資源群組名稱。</block>
+  <block id="0941eb13d6f2381bd092f5083e63aed8" category="cell">容量資源池名稱</block>
+  <block id="4fd739db287e5a16b75e3489f92360b2" category="cell">輸入現有容量資源池的名稱。</block>
+  <block id="9770c6469e9d27585d6c0c389ede7bc3" category="cell">子網路</block>
+  <block id="4c695379c0a2d8fa6d7f8c59bda94b06" category="cell">輸入vnet和子網路。此值包含完整路徑、格式類似於「/PROMUSAT訂閱/」/&lt;PROMUSATure_id&gt;/resourcegros/&lt;resource_Group&gt;/供應商/Microsoft.Network/virtualNetworks/&lt;vpc_name&gt;/subnets/&lt;subhet_name&gt;"。</block>
+  <block id="c8cef9ee8b7303419027647a212fda91" category="list-text">* Snapshot Copy：*如果您想要使用現有磁碟區的特性來建立新磁碟區、請輸入現有磁碟區Snapshot的Snapshot ID。</block>
+  <block id="18801e3c62d625d360e2e7ea2b62c1b7" category="list-text">在左上角輸入您要用於範本的名稱。</block>
+  <block id="56b6bad4ad8b3fcc1c2572a38f72bbbc" category="section-title">建立內部部署ONTAP 的範本</block>
+  <block id="d3a13fb50cc9406d1e6091d1a798ff8a" category="inline-link">如何配置內部部署ONTAP 的功能</block>
+  <block id="2ae042576bd53fa925dc0c175ec115a2" category="paragraph">請參閱<block ref="66f502a6d6407b2e7db3bd3d647a7434" category="inline-link-rx"></block> 如需所有必要參數的詳細資訊、請參閱內部部署ONTAP 的解決方案資料範本。</block>
+  <block id="abea42b586bcc6693bfcf53290293b41" category="paragraph">此時會顯示「新增行動」頁面。</block>
+  <block id="4f58f599c7e133b39a2f56df4f449c81" category="inline-image-macro">顯示如何從「新增行動」頁面選取主要行動的快照。</block>
+  <block id="b9a9d1475979d9d1c4cd0440dd88810d" category="paragraph"><block ref="b9a9d1475979d9d1c4cd0440dd88810d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6c6e50215d08a8e2a4d4b3b967318d88" category="list-text">選擇*在內部部署ONTAP 中建立Volume（內部部署）Sing*作為您要建立的資源類型、然後按一下*套用*。</block>
+  <block id="a00fd358a9eee9d23c91c9d79c7b6e51" category="paragraph">「建立內部部署的磁碟區ONTAP 」「動作定義」頁面隨即顯示。</block>
+  <block id="75ded3aff94ceea416f4a8ab89a32002" category="inline-image-macro">螢幕快照顯示您ONTAP 需要填寫的空白OnPrem範本。</block>
+  <block id="89035127115cb3301d3a94b49531ed51" category="paragraph"><block ref="89035127115cb3301d3a94b49531ed51" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b30775865ed56b7c2909b414f5bb5416" category="list-text">*內容：*輸入內部部署ONTAP 的不工作環境內容（如有需要）。</block>
+  <block id="27ca463515b4c83e76d5222e013a0079" category="paragraph">當使用者從「範本儀表板」（而非工作環境內容）啟動範本時、他們需要選取要建立磁碟區的工作環境、SVM及集合體。</block>
+  <block id="6b8f1d602895dd119fb811094bedb73b" category="list-text">*使用率設定檔：*選擇是否將NetApp儲存效率功能套用至磁碟區。這包括精簡配置、重複資料刪除和壓縮。</block>
+  <block id="40e5030f72431662e47f324512075e1a" category="paragraph">如果範本值已正確完成、則會在「Create Volume in the Einstance ONTAP （建立內部部署的Volume）」方塊中加入綠色勾號。</block>
+  <block id="b74bc7581cece8a120da088eb00d917f" category="list-text">在左上方輸入範本名稱。</block>
+  <block id="679e23d213be6214a99d26fb979d6001" category="paragraph">範本隨即建立、並返回範本儀表板、以顯示新範本。</block>
+  <block id="216d716a4c08d31f3e40260ee58f2904" category="section-title">建立Cloud Volumes ONTAP 一套適用於各種作業環境的範本</block>
+  <block id="0d489881f98fefa7f8b791c4f4e7d7a1" category="paragraph">您可以Cloud Volumes ONTAP 使用範本建立單一節點或高可用度的運作環境。</block>
+  <block id="07b221aacb78d81a6389d6512f7b46cc" category="list-text">此支援目前僅提供給AWS環境。</block>
+  <block id="cc46cd379c9c1e14c8c28bca9392395f" category="list-text">此範本不會在工作環境中建立第一個Volume。您必須在Cloud Volumes ONTAP 範本中新增「Create Volume in Es...（建立流通量）」動作、才能建立Volume。</block>
+  <block id="af78f376877c8c8c70d830fc500a2cca" category="inline-link">如何在Cloud Volumes ONTAP AWS中啟動單一節點的不全功能系統</block>
+  <block id="27b91813df07253f9b34c2c33a28dc25" category="inline-link">AWS中的HHA配對Cloud Volumes ONTAP</block>
+  <block id="cc8cd5a43afbf50d3c76ca4927c286d1" category="paragraph">請參閱<block ref="17218100ebd265ac766a5fc208b6c6f8" category="inline-link-rx"></block> 或是<block ref="e59af64db55d6d6b5c59844c08c8e1b5" category="inline-link-rx"></block> 必須具備的先決條件、以及您需要在此範本中定義的所有參數詳細資料。</block>
+  <block id="982967d26b8426889a4c2982331cbefe" category="paragraph"><block ref="982967d26b8426889a4c2982331cbefe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40bb655abcddd337fbc3dc9a23c1c92b" category="list-text">選取*在AWS（單一節點）中建立工作環境*或*在AWS中建立工作環境（高可用度）*做為您要建立的資源類型、然後按一下*套用*。</block>
+  <block id="e8547bfeacec12f30aa5d7de4fbd86b4" category="paragraph">在此範例中、會顯示「_Create Working Environment in AWS（單一節點）_」頁面。</block>
+  <block id="d70355e885e82b6e2a9347467809fc82" category="inline-image-macro">螢幕快照會顯示您Cloud Volumes ONTAP 需要填寫的空白版作業環境範本。</block>
+  <block id="3232ff2033d10cf395332723ec31481e" category="paragraph"><block ref="3232ff2033d10cf395332723ec31481e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ab59d67e05a3f51373ba331faa69f02e" category="list-text">*詳細資料與認證*：選取要使用的AWS認證資料、輸入工作環境名稱、並視需要新增標記。</block>
+  <block id="09eb13e81cc007418ee8fa04feb8088f" category="paragraph">本頁中的部分欄位是不知自明的。下表說明您可能需要指導的欄位：</block>
+  <block id="2daf1cb573c2c61422faf64610cf9402" category="cell">認證資料</block>
+  <block id="64917fe8c1577c91426bd43a4aef38db" category="cell">這些是 Cloud Volumes ONTAP 適用於整個叢集管理帳戶的認證資料。您可以使用這些認證資料Cloud Volumes ONTAP 、透過ONTAP 「系統管理程式」或其CLI連線至功能驗證。</block>
+  <block id="2cebc28eab2cacd2695a37777c14a93f" category="cell">工作環境名稱</block>
+  <block id="98fed17197f2edc82ba68578c571fdbe" category="cell">Cloud Manager 會使用工作環境名稱來命名 Cloud Volumes ONTAP 支援系統和 Amazon EC2 執行個體。如果您選取該選項、它也會使用名稱做為預先定義安全性群組的前置詞。按一下欄位、然後選取5個選項之一。您可以選擇*任意文字*讓管理員輸入任何名稱、或是指定工作環境名稱必須有特定的字首或字尾、_包含_特定字元、或是遵循您輸入之規則運算式（regex）的規則。</block>
+  <block id="ab2bc7358191e02d5aacdd2ddaa4233d" category="inline-link">AWS 文件：標記 Amazon EC2 資源</block>
+  <block id="b94b3141dd708a0d291780bdda339320" category="cell">AWS 標籤是 AWS 資源的中繼資料。Cloud Manager 會將標記新增至 Cloud Volumes ONTAP 該執行個體、以及與該執行個體相關聯的每個 AWS 資源。如需標記的相關資訊、請參閱<block ref="9bd250e03cdf80384a24635f16673602" category="inline-link-rx"></block>。</block>
+  <block id="6101eef8fd3b11affed5baa0379eb7b5" category="inline-link">AWS工作表</block>
+  <block id="21e39bab34fec6294e31fe4e65b232c7" category="list-text">*位置與連線*：輸入您在中記錄的網路資訊<block ref="837a3d1b1486e7cc7dba08a5d4a77996" category="inline-link-rx"></block>。這包括AWS區域、VPC、子網路和安全性群組。</block>
+  <block id="6f27ddf091b10f1dfd4ab13be0759ec7" category="paragraph">如果您有 AWS Outpost 、 Cloud Volumes ONTAP 您可以選擇 Outpost VPC 、在該 Outpost 中部署單一節點的一套系統。體驗與 AWS 中的任何其他 VPC 相同。</block>
+  <block id="e01401f96474df4861317e5b4493deca" category="list-text">*驗證方法*：選取您要使用的SSH驗證方法、例如密碼或金鑰配對。</block>
+  <block id="94b720129da1fad395a78adb9dd8004f" category="list-text">* 資料加密 * ：不選擇資料加密或 AWS 管理的加密。</block>
+  <block id="8d4e0ae3c5be71d9c725659a6203fb6f" category="paragraph">對於 AWS 管理的加密、您可以從帳戶或其他 AWS 帳戶中選擇不同的客戶主金鑰（ CMK ）。</block>
+  <block id="7238e3ed6732433c6a3fc43c882f2749" category="inline-link">瞭解如何設定 AWS KMS for Cloud Volumes ONTAP the 功能</block>
+  <block id="2dff4bc0654f658707793fc687e4a17f" category="paragraph"><block ref="aab3f238743393f06eea77a640671e14" category="inline-link-rx"></block>。</block>
+  <block id="84fee0ef7a3aad23dfb27e9c3b17b961" category="list-text">*充電方法*：指定您要搭配此系統使用的充電選項。</block>
+  <block id="9dbd3ac8bddbf4313a163e34e79476bf" category="inline-link">瞭解這些充電方法</block>
+  <block id="c2e9e869bf938477d84b552043f7a81a" category="paragraph"><block ref="0cc5783cded63ddb149e3f9f53e8f86e" category="inline-link-rx"></block>。</block>
+  <block id="8ac4cd210de5bd5fe91a871c186e8be3" category="list-text">* NetApp支援網站帳戶*：選擇NetApp支援網站帳戶。</block>
+  <block id="f6b1eeef6a894819bc1138daa571ecaa" category="list-text">*預先設定的套件*：選取四個預先設定的套件之一、以決定在工作環境中建立磁碟區的數個因素。</block>
+  <block id="cb2bbd3723ec0171f93e30cb1d35ebc4" category="list-text">* SMB組態*：如果您打算在此工作環境中使用SMB部署磁碟區、您可以設定CIFS伺服器及相關組態元素。</block>
+  <block id="80a0d065fe120a53a92d1cbae6bd3fa2" category="paragraph">如果範本值已正確完成、則會在「Create Working Environment in AWS（單一節點）（在AWS中建立工作環境）」方塊中新增綠色核取標記。</block>
+  <block id="abd25867aae2404fdbef96ae0b0057ee" category="inline-xref">建立Cloud Volumes ONTAP 一個範本、以供作一份不全版的範本</block>
+  <block id="520d34c754a3e963e32a0fc19ab1421c" category="list-text">您可能想在此範本中新增其他動作、以便為此工作環境建立磁碟區。如果是、請按一下 <block ref="f928d2751b49d5f69d575bc7f78c5aae" category="inline-image-macro-rx" type="image"></block> 並新增這項行動。瞭解如何操作 <block ref="f498f1e6b10c72f9f04179db4da15305" category="inline-xref-macro-rx"></block> 以取得詳細資料。</block>
+  <block id="45a406745a298842b185cafcdaedc62b" category="section-title">使用範本尋找現有資源的範例</block>
+  <block id="f7322605429ac37b6517eaccfdebcdfe" category="paragraph">使用「尋找現有資源」動作、您可以找到特定的工作環境、或是提供各種篩選條件來尋找現有的磁碟區、以便將搜尋範圍縮小到您感興趣的資源。找到正確的資源之後、您可以將磁碟區新增至工作環境、或在產生的磁碟區上啟用雲端服務。</block>
+  <block id="18bc86c303dfcce839364dfb6f86c8d7" category="admonition">現在您可以在Cloud Volumes ONTAP 內部部署ONTAP 的地方找到各種版本的資料、包括：功能性的、功能性的、功能性的、功能性的、功能性的等等Azure NetApp Files 。此外、您也可以在Cloud Volumes ONTAP 內部部署ONTAP 的支援資料中啟用Cloud Backup。稍後將提供額外的資源和服務。</block>
+  <block id="38e15ec3e6bd73e018349ed1f0bf12bb" category="section-title">尋找現有磁碟區並啟動雲端服務</block>
+  <block id="80252c15af311783e16e6d31bb72ca0b" category="paragraph">目前的「尋找現有資源」行動功能可讓您在Cloud Volumes ONTAP 目前ONTAP 未啟用Cloud Backup或Cloud Data Sense的內部部署環境中、找到有關的各種資料。當您在特定磁碟區上啟用Cloud Backup時、此動作也會將您設定為該工作環境預設原則的備份原則設定為、因此這些工作環境中未來的所有磁碟區都可以使用相同的備份原則。</block>
+  <block id="6d0c20318ee7bcc13d58fa262e33c7d2" category="inline-image-macro">螢幕快照顯示如何從「新增行動」頁面選取「尋找現有資源」動作。</block>
+  <block id="0e9d27a36a1187dea1616df501ce108d" category="paragraph"><block ref="0e9d27a36a1187dea1616df501ce108d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="11c981e1d4ed40ea0925d9ae06dae41f" category="list-text">選擇*尋找現有資源*作為您要定義的行動類型、然後按一下*套用*。</block>
+  <block id="1b733abaf243d15600d33f844e9bdc13" category="paragraph">此時會顯示「尋找現有資源動作定義」頁面。</block>
+  <block id="10798727522d9d9973a80cddbbd083ac" category="inline-image-macro">顯示空白的「尋找現有資源」範本的快照、您需要填寫該範本。</block>
+  <block id="23b2538202f81713f750e06e99508701" category="paragraph"><block ref="23b2538202f81713f750e06e99508701" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d453807788f3b6bbd3ea47f9cbe56875" category="list-text">*行動名稱*：輸入自訂的行動名稱、而非預設值。例如、「在叢集ABC上尋找大型磁碟區並啟用備份」。</block>
+  <block id="463c18d84d5e845ea1d485923b7349ce" category="list-text">*資源類型：*選取您要尋找的資源類型。在這種情況下、您可以選擇* Cloud Volumes ONTAP 《Volume in S供 參考*》（*《Volume in S供</block>
+  <block id="7d61d7a876b512b9951ebcd6b058cc77" category="paragraph">這是此動作唯一需要的項目。您現在可以按一下*繼續*、就會收到Cloud Volumes ONTAP 環境中所有版本的所有冊表。</block>
+  <block id="af2373ef86f3287751a203259821db48" category="paragraph">建議您填寫幾個篩選條件、以減少您要套用Cloud Backup行動的結果數量（本例為Volume）。</block>
+  <block id="759a269bf5c05fa6647b728a4b6acab7" category="list-text">在_context_區域中、您可以選取特定的工作環境、以及該工作環境的其他詳細資料。</block>
+  <block id="70b9fbef4c70dff460de52b0d7c1eb40" category="inline-image-macro">快照顯示可套用至「尋找現有資源」範本的內容篩選器。</block>
+  <block id="7a978f856247996229928441e0d8ef1d" category="paragraph"><block ref="7a978f856247996229928441e0d8ef1d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad47acd6a839d467d8e7d8cc0ab575bb" category="list-text">在_Details_（詳細資料）區域中、您可以選取磁碟區名稱、磁碟區大小範圍、以及指派給磁碟區的任何標記。</block>
+  <block id="f3ab419ac906615be19ae0d551c2ddd6" category="paragraph">針對磁碟區名稱、按一下欄位、然後選取5個選項之一。您可以選擇*任意文字*、讓管理員輸入任何名稱、或是指定Volume名稱必須有特定的字首或字尾、_包含_特定字元、或是遵循您輸入之規則運算式（regex）的規則。</block>
+  <block id="8567823797f59455548dc8dd1f03f80e" category="paragraph">對於Volume大小、您可以指定一個範圍、例如所有介於100 GiB和500 GiB之間的Volume。</block>
+  <block id="75aa65993e3f52840fc5b343dbb63651" category="paragraph">對於標記、您可以進一步縮小搜尋範圍、使結果僅顯示具有特定標記金鑰/值配對的磁碟區。</block>
+  <block id="be9642dda4ebe2b728f2c474b3d3a411" category="inline-image-macro">顯示可套用至「尋找現有資源」範本之「詳細資料」篩選器的快照。</block>
+  <block id="817d077440da0b77af9b35e673301360" category="paragraph"><block ref="817d077440da0b77af9b35e673301360" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c253b1193d9cac2bb6fdffc90caab002" category="list-text">按一下*繼續*和頁面更新、以顯示您在範本中定義的搜尋條件。</block>
+  <block id="9fc88e3f72037f83544b6dc4a0f0e114" category="inline-image-macro">快照顯示您為「尋找現有資源」範本所定義的搜尋條件。</block>
+  <block id="7dd1bb02dcba000872f2025a15ad1520" category="paragraph"><block ref="7dd1bb02dcba000872f2025a15ad1520" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a8bf8eaff65aa0f4ae0660056e385701" category="list-text">按一下*立即測試您的搜尋條件*以查看目前的結果。</block>
+  <block id="27d7b10352920ea311d933853a157434" category="inline-image-macro">編輯鉛筆圖示</block>
+  <block id="33e49b40585f164240484bc804e648ef" category="list-text">如果結果與您預期的不一樣、請按一下 <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> 在_Search Criteria（搜尋條件）旁、進一步調整搜尋範圍。</block>
+  <block id="95d491c21e0c934c6282c13d886a25c9" category="list-text">如果結果良好、請按一下「*完成*」。</block>
+  <block id="902215290e82837ad3918c6de3db9e64" category="paragraph">您完成的「尋找現有資源」動作會出現在編輯器視窗中。</block>
+  <block id="9979d1ff76d2ea7068844b0cfd0bdb76" category="list-text">按一下加號以新增其他動作、選取*在Volume上啟用雲端備份*、然後按一下*套用*。</block>
+  <block id="7ebacdda898134e4d1b0a44a8ce8b373" category="paragraph">「在Volume上啟用雲端備份」動作會新增至視窗。</block>
+  <block id="bbc24d39829a188624fd31cd99972f84" category="inline-image-macro">快照顯示將Cloud Backup動作新增至範本的步驟。</block>
+  <block id="a4cbf43d9463d6f510a4d2c7af8800f2" category="paragraph"><block ref="a4cbf43d9463d6f510a4d2c7af8800f2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="629026899287206b23bf1b8d05d2e57c" category="inline-xref">新增備份功能至磁碟區</block>
+  <block id="0864e2983319d781f957de96128569d4" category="list-text">現在您可以定義中所述的備份準則 <block ref="567736f0dbefe603b86c06be6821957e" category="inline-xref-macro-rx"></block> 如此一來、範本就會將正確的備份原則套用至您從「尋找現有資源」動作中選取的磁碟區。</block>
+  <block id="2cd168ea59a502ef9e27e6003134ad57" category="list-text">按一下「*套用*」以儲存您對備份動作所做的自訂作業、然後在完成時按一下「*儲存範本*」。</block>
+  <block id="fb88189ee911a47d2e0e233fefd1523c" category="section-title">尋找現有的工作環境</block>
+  <block id="1399c696c7891af3d1972a47be151f0a" category="paragraph">您可以使用「尋找現有資源」動作來尋找工作環境、然後使用其他範本動作（例如建立磁碟區）、輕鬆在現有工作環境中執行動作。</block>
+  <block id="ee14a216e8a337c2bb79d6d82521a077" category="paragraph"><block ref="ee14a216e8a337c2bb79d6d82521a077" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="68ad7010ce50e08f51cc603a02813591" category="list-text">*行動名稱*：輸入自訂的行動名稱、而非預設值。例如「尋找包含達拉斯的工作環境」。</block>
+  <block id="d12d07cdc05a227cd72eb672e87e4f6a" category="list-text">*資源類型：*選取您要尋找的資源類型。在這種情況下、您可以選擇*工作環境*。</block>
+  <block id="293a4f358df2db5ec8b84c40b989f884" category="paragraph">這是此動作唯一需要的項目。您現在可以按一下*繼續*、就會收到您環境中所有工作環境的清單。</block>
+  <block id="8be93188ada53e1878b3d730f33c567d" category="paragraph">相反地、建議您填寫幾個篩選條件、以減少結果數量（在此案例中為工作環境）。</block>
+  <block id="8a6cf07a7afb6950374a6137dd3207ed" category="list-text">在「_Details_」（詳細資料_）區域中定義幾個篩選器之後、您可以選取特定的工作環境。</block>
+  <block id="e4b9d87ee0a05c6ace352d34259ff623" category="list-text">按一下「*繼續*」儲存您的設定、然後按一下「*完成*」。</block>
+  <block id="04589f02205d83ab5273554763f29cef" category="list-text">在左上角輸入範本名稱、然後按一下*儲存範本*</block>
+  <block id="1c2460f99ff766a130c121d2511fc817" category="section-title">使用範本啟用服務的範例</block>
+  <block id="411375f96ccfa37e0dbc3d0cc4f2819d" category="paragraph">服務範本可讓您在新建立的磁碟區上啟動Cloud Backup、Cloud Data Sense或Replication（SnapMirror）服務。</block>
+  <block id="d09587f155f4de501e417ae05bd6c246" category="section-title">新增備份功能至磁碟區</block>
+  <block id="1ccabcbf7b43011ff18a0521cbf426d2" category="paragraph">建立Volume範本時、您可以新增想要定期使用建立Volume備份的範本<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 服務：</block>
+  <block id="8e50b75e57684da1ad2c63f7281c1bb2" category="admonition">此動作不適用於Azure NetApp Files 不適用的功能。</block>
+  <block id="cc7c4a3dbe40e7192b900e2b4a3f22d4" category="inline-image-macro">此頁面的快照可為您的磁碟區啟用備份功能。</block>
+  <block id="3a5623787eadb0de7109dbf1472e4723" category="paragraph"><block ref="3a5623787eadb0de7109dbf1472e4723" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="390ceefd694c59851dd3cce7b5560a77" category="list-text">*原則*：選取您要使用的備份原則。</block>
+  <block id="2ec2f9ba216ad598e0f2a06ca8613ab2" category="list-text">*內容*：根據預設、會針對工作環境、儲存VM和Volume填入變數、以表示您將為先前在此相同範本中建立的磁碟區建立備份。所以如果您想要這麼做、您就能輕鬆完成所有設定。</block>
+  <block id="45c479a3827985134b6c11fc5b56fe19" category="inline-link-macro">填寫內容欄位</block>
+  <block id="55ec93141dffeda07c8ca26ba1fa8f75" category="paragraph">如果您想要為不同的磁碟區建立備份、可以手動輸入這些詳細資料。瞭解如何操作 <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> 表示不同的Volume。</block>
+  <block id="1af1dabe0aa1f41e5209035cdc7e766d" category="list-text">按一下「*套用*」以儲存變更。</block>
+  <block id="b5c5217c35ca5ffa37ec218b349e4d8e" category="section-title">新增Data Sense功能至磁碟區</block>
+  <block id="7da7de40922950422b249e15e2c3102a" category="paragraph">建立Volume範本時、您可以新增範本、以便使用掃描Volume以取得法規遵循與分類<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block> 服務：</block>
+  <block id="b6af640e26399bc8467a4465b802ea47" category="inline-image-macro">此頁面的快照可為您的磁碟區啟用掃描功能。</block>
+  <block id="3f95813bf3f9fe4ef1653df2a79b2b7d" category="paragraph"><block ref="3f95813bf3f9fe4ef1653df2a79b2b7d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="273ef973fddf0605397f60b2a725e43e" category="list-text">*內容*：根據預設、會針對工作環境、Volume名稱、Volume UUID、Volume路徑和傳輸協定填寫變數、以表示您將掃描先前在此相同範本中建立之Volume的資料。所以如果您想要這麼做、您就能輕鬆完成所有設定。</block>
+  <block id="38c9050a05ab7ae3bc16a77a1ce8e787" category="paragraph">如果您要掃描不同Volume的資料、可以手動輸入這些詳細資料。瞭解如何操作 <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> 表示不同的Volume。</block>
+  <block id="e0c791fcd9f870d36b0118528bd195c2" category="section-title">新增複寫功能至磁碟區</block>
+  <block id="8c340dc334134096f68b880b42a8692c" category="inline-link">複寫</block>
+  <block id="e91e8aaf9f11e77bfda39b40027b045f" category="paragraph">建立Volume範本時、您可以使用將磁碟區中的資料複寫到其他磁碟區的範本中<block ref="f2bb37938a60ba7c308705367c1f4d0b" category="inline-link-rx"></block> 服務：您可以將資料複寫到Cloud Volumes ONTAP 一個不間斷叢集或內部ONTAP 的一個不間斷叢集。</block>
+  <block id="8dcc2a374ce8c093526cc5152324230d" category="paragraph">複寫功能包含三個部分：選取來源磁碟區、選取目的地磁碟區、以及定義複寫設定。每一節的說明如下。</block>
+  <block id="4da2d6a9396d0b82185925638b423b25" category="list-text">*來源詳細資料*：輸入您要複寫之來源磁碟區的詳細資料：</block>
+  <block id="cfae220ef6bc70299c0d06988e12e0b6" category="inline-image-macro">頁面的快照、用於定義複寫來源Volume位置。</block>
+  <block id="db81be12438b4e3c3bdf3beca6e831f7" category="paragraph"><block ref="db81be12438b4e3c3bdf3beca6e831f7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a91218a8b9b25c1cc8cec554d31e45c0" category="list-text">根據預設、會針對工作環境、儲存VM和Volume填入前三個變數、表示您將複寫先前在此相同範本中建立的磁碟區。所以如果您想要這麼做、您就能輕鬆完成所有設定。</block>
+  <block id="7983c642c200e679fc182d6cda6332be" category="paragraph">若要複寫不同的磁碟區、您可以手動輸入這些詳細資料。瞭解如何操作 <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> 表示不同的Volume。</block>
+  <block id="f5eccf7ec10f562fd7945167b11881ca" category="list-text">複寫作業需要來源與目的地工作環境透過其叢集間生命週年來連線。輸入來源工作環境的叢集間LIF IP位址。</block>
+  <block id="174102b086067ead19a50d7ce2f8211a" category="paragraph">若要取得此資訊：按兩下工作環境、按一下功能表圖示、然後按一下資訊。</block>
+  <block id="af686206beaeefe98fe2a5a5cac4ffec" category="list-text">*目的地詳細資料*：輸入複寫作業所建立之目的地磁碟區的詳細資料：</block>
+  <block id="c5c1dec1eb73121500306c6b9b8bd6c6" category="inline-image-macro">頁面的快照、用於定義複寫目的地Volume位置。</block>
+  <block id="5cf0c8384bbad7232646ccbe04ed32b0" category="paragraph"><block ref="5cf0c8384bbad7232646ccbe04ed32b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="99b3d3bf418d271f350304cf1acdcd45" category="list-text">選取要建立磁碟區的工作環境。</block>
+  <block id="faccd2324eec8e1960bb88fd7aa8cdb6" category="list-text">選取磁碟區所在的儲存VM。</block>
+  <block id="34a5bd93b44b1a265bd952eb2c9f4c52" category="list-text">將磁碟區複製到Cloud Volumes ONTAP 一個叢集（而非內部ONTAP 的叢集）時、您需要指定目的地供應商（AWS、Azure或GCP）。</block>
+  <block id="744304af5427c93a0de90b14d5d0a697" category="list-text">將磁碟區複製到Cloud Volumes ONTAP 某個物件叢集時、您可以指定是否在目的地磁碟區上啟用磁碟區分層。</block>
+  <block id="8658f363929ef58e4d7bb3ba3dfa8f72" category="list-text">針對目的地Volume名稱、按一下欄位、然後選取5個選項之一。您可以選擇*任意文字*、讓管理員輸入任何名稱、或是指定Volume名稱必須有特定的字首或字尾、_包含_特定字元、或是遵循您輸入之規則運算式（regex）的規則。</block>
+  <block id="5fa8f034006e1b96b6e2a47890b3ae33" category="list-text">複寫作業需要來源與目的地工作環境透過其叢集間生命週年來連線。輸入目的地工作環境的叢集間LIF IP位址。</block>
+  <block id="7fcd5d25a42a71b6edb4a94ce9593493" category="list-text">選取磁碟區所在的集合體。</block>
+  <block id="cd5d05c14061b6263cc650d83d3d5659" category="list-text">將磁碟區複製到Cloud Volumes ONTAP 一個邊叢集（而非內部ONTAP 的邊叢集）時、您需要指定要用於新磁碟區的磁碟類型。</block>
+  <block id="4d10b6637923bf1b343d93d2f5f97467" category="list-text">*複寫詳細資料*：輸入複寫作業類型和頻率的詳細資料：</block>
+  <block id="e735bf2a268997d317453aed9b1e1464" category="inline-image-macro">頁面快照、用於定義關係的複寫設定。</block>
+  <block id="6903a733d838513debd657e6e4b52918" category="paragraph"><block ref="6903a733d838513debd657e6e4b52918" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e05b02199241577d21f467e3a216fc1" category="inline-link">複寫原則</block>
+  <block id="23647b4aee667229f438bac6d37c6f14" category="list-text">選取<block ref="fce626f96b8a582bd914af9774e3f4bd" category="inline-link-rx"></block> 您想要使用的。</block>
+  <block id="28b7ceda6afe52e7cddb056ae1cc1b42" category="list-text">選擇一次性複本或重複複複複寫排程。</block>
+  <block id="a890fcd17657bbd0255d609a9ac66f87" category="inline-link-macro">請參閱偏移報告中的內容</block>
+  <block id="550aba8dd2351fcca6220e9726d1b0b4" category="list-text">如果您想要讓偏移報告包含SnapMirror關係的複寫健全狀況、以及延遲時間、狀態和上次傳輸時間、請啟用複寫健全狀況狀態監控。 <block ref="e9afe1d61d7f4e2024b782abd0cbb1af" category="inline-link-macro-rx"></block>。</block>
+  <block id="a17ec67a32a0998705df91c25c3b8420" category="list-text">選取是否要設定傳輸率限制、然後輸入資料傳輸的最大傳輸率（以每秒KB為單位）。您可以輸入固定值、也可以提供最小值和最大值、讓儲存設備管理員在該範圍內選取一個值。</block>
+  <block id="e03c4d2a8455ec2482acf1f509382257" category="section-title">建立範本後該怎麼辦</block>
+  <block id="856a9d1850ea33e764f9c6e201455be4" category="paragraph">建立範本之後、您應該通知儲存管理員在建立新的工作環境和磁碟區時使用範本。</block>
+  <block id="73d6735a0765fae8b09bab1a9aa14293" category="inline-link-macro">使用範本建立資源</block>
+  <block id="916d7a2812bff61e120f6cb051a97f08" category="paragraph">您可以將它們指向 <block ref="00987a40189f413ef051200970901187" category="inline-link-macro-rx"></block> 以取得詳細資料。</block>
+  <block id="a0aa6f0787dc9e06db535b8b92d3da0a" category="section-title">編輯或刪除範本</block>
+  <block id="ffb2a1eed8ad8c67507aad3d1a39caa3" category="paragraph">如果需要變更任何參數、您可以修改範本。儲存變更之後、所有未來從範本建立的資源都會使用新的參數值。</block>
+  <block id="47ea4ecfbdf34424db879d30ee9d311b" category="paragraph">如果您不再需要範本、也可以刪除範本。刪除範本不會影響使用範本建立的任何資源。不過、刪除範本之後、就無法進行資料刪除循規檢查。</block>
+  <block id="b44b7e1f0ab25d2be436ede5d937b8c0" category="inline-image-macro">顯示如何修改範本或刪除範本的快照。</block>
+  <block id="e11c8770592f0241028d35b02f4f9619" category="paragraph"><block ref="e11c8770592f0241028d35b02f4f9619" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3b35f794b6029f799ac51ebc0e6aa73" category="section-title">複製範本</block>
+  <block id="03332676c38cbd1189f2240710881e3a" category="paragraph">您可以建立現有範本的複本。如果您想要建立與現有範本非常類似的新範本、這可以節省大量時間。只要以新名稱製作複本、就能編輯範本、以變更使範本成為唯一的兩個項目。</block>
+  <block id="763165e5bc9a9a1c445da7d2ef9edaf1" category="inline-image-macro">顯示如何複製範本的快照。</block>
+  <block id="45a0059a48c059287929332e05648327" category="paragraph"><block ref="45a0059a48c059287929332e05648327" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbabd9bfcb3ce90ea05504c320db481e" category="summary">選取貴組織所建置的其中一個應用程式範本、以建立針對特定工作負載和應用程式最佳化的工作環境或磁碟區。範本也可讓您在磁碟區或現有磁碟區上啟動Cloud Backup、Cloud Data Sense和Replication（SnapMirror）。</block>
+  <block id="2d26910773af1a0f9d4d48400c5c93b1" category="doc">使用範本建立或修改資源</block>
+  <block id="c66b8415e6c06857c4a2df8e4beb665d" category="inline-link">複寫（SnapMirror）</block>
+  <block id="9552710f5d08d8e046e5e38b40dd0754" category="paragraph">選取貴組織所建置的其中一個應用程式範本、以建立針對特定工作負載和應用程式最佳化的工作環境或磁碟區。範本也可讓您啟動<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block>、<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>和<block ref="7b4b255123bb321e706fd8a6488dad10" category="inline-link-rx"></block> 在已建立的磁碟區或現有磁碟區上。</block>
+  <block id="5f29105c4fcb4fd7664c9b573f2325b4" category="paragraph">範本可讓您建立Cloud Volumes ONTAP 適用於內部Azure NetApp Files 部署ONTAP 的各種作業系統的各種資料。</block>
+  <block id="e0fb2c2abefd11630ebc42b8a6eb3570" category="list-text">在您Cloud Volumes ONTAP 使用範本建立一個適用於內部部署ONTAP 的功能完善的功能區之前、Azure NetApp Files 請先確定您可以存取要部署該磁碟區的適當工作環境。</block>
+  <block id="e04a6c526d4b3218b5b39dab077db37c" category="list-text">如果範本啟動磁碟區上的雲端服務、例如<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 或<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>，確保服務在您的環境中處於活動狀態並獲得許可。</block>
+  <block id="f931f9fe2a71453ad570183c341aa8ad" category="paragraph">選取「*應用程式範本*」服務、然後按一下「*範本*」索引標籤。</block>
+  <block id="8e11a084ad23a73bf5ea573d54dded8e" category="paragraph">選取範本、按一下*執行範本*、然後在可編輯的欄位中輸入值以建立資源。</block>
+  <block id="72e3ca24265542fce89dd834f12f4619" category="list-text">建立Cloud Volumes ONTAP 一個SNetApp功能區時、請確保Cloud Volumes ONTAP 您擁有一個可供使用的功能不全的工作環境。</block>
+  <block id="be34f1201bb3e74c3a66c39a92d09bee" category="list-text">建立內部部署ONTAP 的SNetApp時、請確保您擁有內部部署ONTAP 的可運作環境。</block>
+  <block id="05c907c9bac7ddec874ec0fcb09aad0c" category="list-text">建立Azure NetApp Files 一個SNetApp功能區時、請確保Azure NetApp Files 您擁有一個可供使用的功能不全的工作環境。</block>
+  <block id="a499c28f4eb5f5209b3bea27baae8295" category="list-text">如果範本啟動磁碟區上的雲端服務、例如 <block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block>、<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>或<block ref="7b4b255123bb321e706fd8a6488dad10" category="inline-link-rx"></block>，確保服務在您的環境中處於活動狀態並獲得許可。</block>
+  <block id="b2da214653ffb084521bfa6c178ff811" category="section-title">選取並執行Volume範本</block>
+  <block id="7e74b3cdfd5537c5b51af1069f462892" category="paragraph">有多種方法可以選取及執行範本來建立新的Volume：</block>
+  <block id="41ff95e1ea070071cb2436d312ea3115" category="list-text">從工作環境執行Volume範本</block>
+  <block id="7d732f0050089fa03a5ccaf0ef3972e8" category="list-text">從「範本」儀表板執行Volume範本</block>
+  <block id="2b408048493f7891ab8a18339cbef7b1" category="paragraph">無論您選擇何種方法、您必須定義的所需Volume參數詳細資料都可在下列各節中找到：</block>
+  <block id="1d4cf496ca25a3cab66cbc73d2b1c000" category="inline-link">如何配置Cloud Volumes ONTAP 功能不均</block>
+  <block id="2be95708ec7ad744a5fa35812c4330a3" category="list-text"><block ref="2be95708ec7ad744a5fa35812c4330a3" category="inline-link-rx"></block></block>
+  <block id="96483bf24dd5d282884c28a8c230bfde" category="inline-link">如何配置Azure NetApp Files 功能不均</block>
+  <block id="ed7e85ad682d7c827abfc065cc610813" category="list-text"><block ref="ed7e85ad682d7c827abfc065cc610813" category="inline-link-rx"></block></block>
+  <block id="df4a9164b01ccf35f74c9520638ad0b7" category="inline-link">如何配置內部部署ONTAP 的功能</block>
+  <block id="34b8afcdd2d501d158f8dfa46a70068b" category="list-text"><block ref="34b8afcdd2d501d158f8dfa46a70068b" category="inline-link-rx"></block></block>
+  <block id="c07fd60a71244d7a4ab72c83beb068d6" category="section-title">從工作環境執行Volume範本</block>
+  <block id="2342f0281f4d2a90f7477ed651c18e7f" category="paragraph">您可以從「工作環境」頁面和「磁碟區詳細資料」頁面、將磁碟區新增至現有的工作環境。</block>
+  <block id="847533f76f2539591f2ed541ef5ef72e" category="list-text">從「工作環境」頁面或「磁碟區詳細資料」頁面、按一下「從範本*新增磁碟區」。</block>
+  <block id="0ac913640e05ca365f5a393962934e01" category="inline-image-macro">兩個螢幕擷取畫面顯示使用者如何從範本建立新磁碟區。</block>
+  <block id="2d892e3cbbb0b29eb197061deb0539cd" category="paragraph"><block ref="2d892e3cbbb0b29eb197061deb0539cd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="866e23a1c4ed5bf233d7e358044b8e25" category="paragraph">此時會顯示_範本儀表板_、其中僅列出適用於所選工作環境的範本、例如、它只會顯示Cloud Volumes ONTAP 一些範本。</block>
+  <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">更多圖示</block>
+  <block id="0107b14a93ef1d128a47eab0a257362b" category="list-text">按一下 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 和*執行範本*。</block>
+  <block id="ef7dd761a51f95d983604b03095ba47b" category="inline-image-macro">顯示如何從範本儀表板執行範本的快照。</block>
+  <block id="764523b69b476a762d8f6178a65eee14" category="paragraph"><block ref="764523b69b476a762d8f6178a65eee14" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f505856a4a971e934b73488d7faffec5" category="paragraph">此時會出現_從Template新增Volume _頁面。</block>
+  <block id="190737142dd783de87873656b362e980" category="list-text">在可編輯欄位中輸入值以建立磁碟區、然後按一下*執行範本*。</block>
+  <block id="6e3b3a4e03da2c7a0fbae4147925038b" category="inline-image-macro">螢幕快照顯示您從範本建立磁碟區所需定義的參數。</block>
+  <block id="3e4296163753c591705e041795661a6c" category="paragraph"><block ref="3e4296163753c591705e041795661a6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="29dfbe5727531f456e16c418443650fb" category="section-title">從「範本儀表板」執行Volume範本</block>
+  <block id="79a5be6184496e04a800701c03275ada" category="paragraph">您可以從_範本儀表板_將磁碟區新增至現有的工作環境。</block>
+  <block id="ab5def1a97337779a1bc393108327177" category="paragraph">此時會顯示_範本儀表板_。</block>
+  <block id="596f8bd98917485511472f81dd61ef9e" category="list-text">針對您要使用的範本、按一下 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 和*執行範本*。</block>
+  <block id="034adad7c67d2e9a9dd3a8019b40eb84" category="paragraph"><block ref="034adad7c67d2e9a9dd3a8019b40eb84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a918532ef256d4238d742eaee5308f7f" category="paragraph">「執行範本_」頁面隨即出現。</block>
+  <block id="80ff21e45244c476e2be6b71de223d38" category="list-text">在可編輯欄位中輸入值以建立磁碟區、然後按一下*執行範本*。</block>
+  <block id="dbe672112d3378110db8fa7757b6ec30" category="paragraph"><block ref="dbe672112d3378110db8fa7757b6ec30" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0008e4b80c15d6d38bd1f6234a51330c" category="paragraph">請注意、當您從儀表板執行範本時、需要選取工作環境和其他變數（例如儲存VM和/或Aggregate）。當您從工作環境執行範本時、工作環境會自動填入。</block>
+  <block id="9ab493f5de85b8e5a3705fe61fdf293d" category="section-title">選取並執行工作環境範本</block>
+  <block id="01a2a85f3cd4ec0dcb3da1124102db42" category="paragraph">如果貴公司已建立此功能的範本、您可以從_範本儀表板_建立新的工作環境。</block>
+  <block id="6602afb860a6cca23c3b75bf601365eb" category="inline-link">在 Cloud Volumes ONTAP AWS 中啟動</block>
+  <block id="03fdeb1a058aa425a68019c66e34e6ca" category="paragraph">如果您對建立工作環境所需的詳細資料有任何疑問、請參閱<block ref="497bfdbba9caf2f6a6f7d799eda40dc3" category="inline-link-rx"></block>。</block>
+  <block id="6195381a3e6e204f9315912ad2e31d58" category="paragraph"><block ref="6195381a3e6e204f9315912ad2e31d58" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4532596496eaadd10e82985d53d942d9" category="list-text">在可編輯欄位中輸入值、以建立工作環境和第一個磁碟區、然後按一下*執行範本*。</block>
+  <block id="f208614ddd4a42d1fe01800107447f9d" category="inline-image-macro">螢幕快照顯示您從範本建立工作環境所需定義的參數。</block>
+  <block id="c1f52c2315cb68ab5da30355d493efa8" category="paragraph"><block ref="c1f52c2315cb68ab5da30355d493efa8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="798178653cd4f1b33a2dc3600f51d489" category="section-title">選取並執行尋找現有資源的範本</block>
+  <block id="8d320e289935a3bc0309b4430f10862f" category="paragraph">如果貴公司使用此功能建立了範本、您可以執行範本來尋找特定資源（例如磁碟區）、然後在這些資源上啟用雲端服務（例如Cloud Backup）。執行範本時、您可以稍微調整一下、以便只將雲端服務套用至適當的資源。</block>
+  <block id="f256ffa6b4a4136dfb85dcf69983ada2" category="paragraph"><block ref="f256ffa6b4a4136dfb85dcf69983ada2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="026ba222ebdf2fd2c82a0d12c610c566" category="paragraph">「_執行範本_」頁面隨即出現、並執行範本中定義的搜尋、以尋找符合條件的磁碟區。</block>
+  <block id="89c185a4d78a8567859db775ed13246b" category="list-text">在_Volume Results（磁碟區結果）區域中檢視傳回的磁碟區清單。</block>
+  <block id="b1fcd481a40253a09785803da0077de9" category="inline-image-macro">快照顯示從「尋找資源」搜尋條件傳回的磁碟區。</block>
+  <block id="1dc5726bf39154cb21baff6b494f9fad" category="paragraph"><block ref="1dc5726bf39154cb21baff6b494f9fad" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca98aa84984d29ab9e65eedb02a68ba7" category="list-text">如果結果符合您的預期、請使用範本_在Volume上啟用雲端備份_一部分的條件、為您想要啟用雲端備份的每個磁碟區選取核取方塊、然後按一下*執行範本*。</block>
+  <block id="f3b757371a9961d5ce7c320198eb268b" category="paragraph">如果結果與您預期的不一樣、請按一下 <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> 在_Search Criteria（搜尋條件）旁、進一步精簡搜尋。</block>
+  <block id="c6eb5da2af16b1f095636b3b5fc6a252" category="paragraph">範本將會執行、並在您從搜尋條件中檢查的每個磁碟區上啟用Cloud Backup。</block>
+  <block id="ad065cba81dd0205f37aa602c122c6aa" category="paragraph">任何錯誤都會在_執行您的範本_頁面中叫出、您可以視需要解決問題。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供版權聲明、商標、專利等存取權限。</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 標誌及 NetApp 商標頁面上列出的標章均為 NetApp 、 Inc. 的商標。其他公司與產品名稱可能為其各自所有者的商標。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">專利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">如需最新的 NetApp 擁有專利清單、請參閱：</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隱私權政策</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
+  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9 注意事項</block>
+  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
+  <block id="6fab7ff15514de4d3ca2883bd502b6e7" category="inline-link-macro">AppTemplate注意事項</block>
+  <block id="775a83959890feedd00e6dc592c3e60f" category="list-text"><block ref="775a83959890feedd00e6dc592c3e60f" category="inline-link-macro-rx"></block></block>
+  <block id="1b5e9cae3a94402e9b6da6ef4080d155" category="summary">瞭解應用程式範本和標記的新功能。</block>
+  <block id="19ec922e883af01ef71b60b0644f1764" category="doc">應用程式範本與標記的新功能</block>
+  <block id="983a4e7f5913304ec713a249baf7be47" category="section-title">2022年3月3日</block>
+  <block id="400480e0d45c783abec0a0fffbb005a6" category="section-title">現在您可以建立範本來尋找特定的工作環境</block>
+  <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link">如需詳細資料、請前往此處</block>
+  <block id="d92cd2c19989d78fa305aa796b16eb3e" category="paragraph">使用「尋找現有資源」動作、您可以識別工作環境、然後使用其他範本動作（例如建立磁碟區）、輕鬆在現有的工作環境中執行動作。<block ref="9d92075da3fbaa4669bd5d845665bbc5" category="inline-link-rx"></block>。</block>
+  <block id="411448f8702bbfa858b0a2ba2ee94014" category="section-title">能夠在Cloud Volumes ONTAP AWS中建立一個功能不只是功能不一的HA工作環境</block>
+  <block id="6eed6fdcaa0bf2c22f0c8e78ff686d29" category="inline-link">瞭解如何建立Cloud Volumes ONTAP 適用於各種作業環境的範本</block>
+  <block id="9f1c9f721b531a16a189c619276f3969" category="paragraph">目前在Cloud Volumes ONTAP AWS中建立功能完善的環境、除了建立單一節點系統之外、還包括建立高可用度系統。<block ref="35471ca8d19c78b8fa96525b636e5efc" category="inline-link-rx"></block>。</block>
+  <block id="17fc50243c5a80f407e83d268bcab18e" category="section-title">2022年2月9日</block>
+  <block id="f1f7e50301c1e57e30e795fa8928ee8f" category="section-title">現在、您可以建立範本來尋找特定的現有磁碟區、然後啟用Cloud Backup</block>
+  <block id="98b343467576e58f6658965bc67f83c1" category="paragraph">使用新的「尋找資源」動作、您可以識別要啟用Cloud Backup的所有磁碟區、然後使用Cloud Backup動作來啟用這些磁碟區上的備份。</block>
+  <block id="8b4368f9c9aad8f44dd1b5ba1d4d746a" category="paragraph">目前支援Cloud Volumes ONTAP 的是在內部部署ONTAP 的不支援系統上的大量資料。<block ref="f7210026d1a7cf546c7270b9d8e104cc" category="inline-link-rx"></block>。</block>
+  <block id="784044bd2af30d58bbb0dbcea3adbad6" category="section-title">2021年10月31日</block>
+  <block id="70c889b200c3ef8dbb491ca542d1d091" category="section-title">現在您可以標記同步關係、以便將其分組或分類、以便輕鬆存取</block>
+  <block id="049ebb609707e4c76f578eb98777ffdc" category="inline-link">深入瞭解資源標記</block>
+  <block id="00b4c4979fe8d65dc663ea7c82a1b1c2" category="paragraph"><block ref="ddc85a18edb3f9e32810e603b7ef9eb7" category="inline-link-rx"></block>。</block>
+  <block id="778446633edb0e3ec577cd756d668367" category="section-title">2021年10月11日</block>
+  <block id="b2792e486aa7d3697e8cdc3061fee8eb" category="section-title">現在您可以建立現有範本的複本</block>
+  <block id="addd83032f7bc85573c2d778fbce152b" category="inline-link-macro">瞭解如何建立範本複本</block>
+  <block id="d8297eba97a5465d726b7dfc48cc13ea" category="paragraph">建立複本可節省大量時間、以便建立與現有範本非常類似的新範本。只要以新名稱製作複本、然後變更使範本獨一無二的兩個項目即可。 <block ref="f91157bfd2bb5cbf5e539da6f97e4710" category="inline-link-macro-rx"></block>。</block>
+  <block id="bd54d700336d620d317331b08aa02c25" category="section-title">現在、在使用範本建立的磁碟區上啟用服務變得更簡單</block>
+  <block id="0cb0eeda22a2ab5a3af95e330a22a74c" category="paragraph">在您需要選取變數以識別工作環境、儲存VM和Volume名稱之前。現在範本會為您新增此資訊。如此可簡化新增雲端備份、雲端法規遵循及複寫服務至新建立的磁碟區的作業。</block>
+  <block id="6642a926337ad7312f290ed116119905" category="section-title">我們已新增支援功能、讓您可以標記特定的GCP資源</block>
+  <block id="db1b81be614bd9a5ca7dc44b22c02310" category="inline-link-macro">請參閱您可以標示的GCP資源</block>
+  <block id="e4e712eb035bdea737277dd1b8993a0a" category="paragraph">現在您可以使用Cloud Manager標記服務來管理GCP資源上的標籤。您可以檢視已套用至資源的GCP標籤和標籤值、也可以將這些標籤套用至您所管理的其他GCP資源。 <block ref="409286efa16f3a61c8f6160b0cdd3b73" category="inline-link-macro-rx"></block>。</block>
+  <block id="d798cbf5a08fbeb9fdd3652e5b00bb4c" category="section-title">2021年9月2日</block>
+  <block id="d79a83633ad92c383dcbb0a13e0bcb54" category="section-title">現在您可以使用標記服務來管理Azure資源上的標記</block>
+  <block id="b4b08857877112938961aaa3e2a131f2" category="inline-link-macro">查看您可以標記的Azure資源</block>
+  <block id="44e0789645e569abc1d8998ab3015e3d" category="paragraph">您可以檢視已套用至資源的Azure標記和標記值、也可以將這些標記套用至您所管理的其他Azure資源。 <block ref="566291be7033a26e1b235b2a2d2ef8ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="1625471915e0f870bd60f61204e44adb" category="section-title">現在可以標記一些額外的AWS EC2資源</block>
+  <block id="d8cd3b5af685675591328bfe617a63c8" category="section-title">2021年8月8日</block>
+  <block id="f83d30e0e720fff7c6bf6e63a011b32f" category="section-title">現在您可以Cloud Volumes ONTAP 使用範本建立一個不只是功能的工作環境</block>
+  <block id="984956ca6b0ab2e60f484c9bada495b5" category="inline-link-macro">建立Cloud Volumes ONTAP 一套適用於各種作業環境的範本</block>
+  <block id="05ef6a32f83373b0aaaab04a0cfb067e" category="paragraph">此支援目前僅提供給AWS環境、而且僅適用於單節點叢集。瞭解如何操作 <block ref="b3c0e34ddc6f02981e8f634895a0f3cf" category="inline-link-macro-rx"></block>。</block>
+  <block id="2c0be6f7358124aa37df859a713d308c" category="section-title">新功能可讓您在Volume範本中新增標記至Volume</block>
+  <block id="adb5f80ec3b6f1b0d9ad3b40327218db" category="paragraph">標記可讓您將不同的資源分組、以識別應用程式、區域或部門、以便執行自動化或將成本分配給特定部門或區域。</block>
+  <block id="bc7511a95a277ec462af40b1c9446eff" category="section-title">現在您可以在Cloud Manager中管理AWS EC2執行個體的標記</block>
+  <block id="587a3b529ee36768600b3185997270b8" category="inline-link-macro">深入瞭解標記</block>
+  <block id="87c0200a60cc25f90f7d11c9af5852e4" category="paragraph">您可以檢視已套用至EC2執行個體的AWS標記和標記值、也可以將這些標記套用至您正在管理的其他EC2執行個體。 <block ref="78bc354b5bc36ea6c1a33109df4c795e" category="inline-link-macro-rx"></block>。</block>
+  <block id="148ac7400035f34ce9532083a87fe872" category="section-title">2021年7月13日</block>
+  <block id="6fddf82f19600242e06b00b39fe5b65e" category="section-title">已新增支援以在定義範本時使用複寫服務</block>
+  <block id="367ca1b4aadef246752fe5dc9dbfa720" category="inline-link-macro">複寫正在建立之磁碟區中的資料</block>
+  <block id="bd78b220c8f6ffb11029e676aca762e1" category="inline-link">複寫服務</block>
+  <block id="18b66794f04012b531d4cc5914f5f8f3" category="paragraph">現在您可以新增想要的範本 <block ref="6738ace5df735ae0ff117275f600ff2e" category="inline-link-macro-rx"></block> 至另一個使用的Volume<block ref="0cbc5a9fd380783b2e1491fb4decd0c8" category="inline-link-rx"></block>。</block>
+  <block id="b97e650c4494f3305ee0ac31ef6caa19" category="paragraph">當您將資料複寫到其他NetApp儲存系統、並持續更新次要資料時、資料會保持最新狀態、並在需要時隨時保持可用。</block>
+  <block id="f506872ede8f49b310b1f217dfbecce5" category="section-title">從範本設定下載包含「磁碟區」的所有磁碟區報告</block>
+  <block id="8b521b3330e37ed57ab6eea2702514ff" category="inline-link-macro">如何下載您的偏移報告</block>
+  <block id="d995a583774874e6dfba85f30dc14514" category="paragraph">如此一來、您就能識別這些磁碟區、並指派人員讓磁碟區恢復法規遵循狀態。請參閱 <block ref="3861ce04d0fce9eae63955cfc17ca34d" category="inline-link-macro-rx"></block>。</block>
+  <block id="5113dc13004941ed2e6dd508ad063909" category="section-title">新推出的標記服務</block>
+  <block id="b2c5f55555590a4c06851e0098a9fbbd" category="paragraph">全新Cloud Manager功能可讓您將標記套用至現有ONTAP 的支援資源、以協助組織及管理這些資源。標記是中繼資料、可用來將資源分組、以識別應用程式、環境、地區、帳單代碼、雲端供應商、 以及更多資訊。</block>
+  <block id="bef30da0bb60a2c21060e5694267abfe" category="paragraph"><block ref="78bc354b5bc36ea6c1a33109df4c795e" category="inline-link-macro-rx"></block>。</block>
+  <block id="945fb8f32f58d1cc36cb9f1e9e4c6fe5" category="section-title">2021年6月7日</block>
+  <block id="294787c0f0d7e3e2190db5b2d601b396" category="section-title">現在、您可以在使用者執行範本時、有條件地啟用某些動作</block>
+  <block id="a1b4bb66baa87c6181574db8b88c8d3d" category="paragraph">例如Cloud Volumes ONTAP 、如果在啟用NetApp儲存效率的情況下建立了一個支援功能區、則該磁碟區也會啟用Cloud Backup。如果未啟用儲存效率、則不會啟用Cloud Backup。</block>
+  <block id="be1e169d75e8b12c690c295e44c3528f" category="section-title">您現在可以ONTAP 使用範本、在內部部署的系統上建立Volume</block>
+  <block id="952326f3e521cc60cf8ef420a4ebc40b" category="paragraph">應用程式範本可讓您使用範本在現有工作環境上建立磁碟區。</block>
+  <block id="310b0424f7115f87e39e306f22db9f8e" category="section-title">在建立範本時、新增了稱為「飄移」的功能作為選項</block>
+  <block id="011741db456ebe1ea2d73d2c43f93efc" category="paragraph">此功能可讓Cloud Manager監控您在範本中輸入的參數硬編碼值。儲存管理員使用該範本建立磁碟區之後、如果Cloud Manager稍後發現參數值已變更、使其不再符合範本定義、您可以從設計的範本中看到所有「磁碟區」。如此一來、您就能識別這些磁碟區並進行變更、使其恢復法規遵循狀態。</block>
+  <block id="824b76af9549cb14fd2443aa485afb15" category="section-title">2021年5月2日</block>
+  <block id="719c876ca7b16f592c8bd26cdbb0ffaa" category="section-title">現在您可以在建立Volume範本時整合Cloud Data Sense</block>
+  <block id="96e3f6826df4638ccb92b90bd780b773" category="paragraph">現在、您可以針對每個新建立的磁碟區啟用Data Sense、或為每個新建立的磁碟區啟用Cloud Backup、或是在建立的磁碟區上建立啟用Backup和Compliance的範本。</block>
+  <block id="fb83416536a7bb0dc17872352e0bab64" category="summary">AppTemplate服務可讓您在工作環境中標準化資源建立。例如、您可以在稍後儲存管理員使用範本建立磁碟區時、在「Volume範本」中硬式編碼必要的參數。這可能包括所需的磁碟類型、大小、傳輸協定、快照原則、雲端供應商、 以及更多資訊。您也可以為每個建立的Volume開啟特定服務、例如Cloud Backup。</block>
+  <block id="8840e623646d3d59bdb75d58d2cbfb3c" category="doc">深入瞭解AppTemplate</block>
+  <block id="29c77a5a00dda7efae90c176f1eaa37b" category="paragraph">範本可讓儲存管理員輕鬆建立專為每個已部署應用程式的工作負載需求最佳化的磁碟區、例如資料庫、電子郵件或串流服務。而且儲存架構設計師知道每個磁碟區都是針對每個應用程式最佳化建立、因此能更輕鬆地完成工作。</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
+  <block id="2cc0eed5a3999c679ed14d2cb6588587" category="paragraph">AppTemplate提供下列功能與優點：</block>
+  <block id="3a07949495aa0f10524a38b2f8b42ff9" category="list-text">自動化並改善基礎架構的設計與開發</block>
+  <block id="628898f2daed85c109f1e353f32ae510" category="list-text">提供單一位置以啟動不同的NetApp雲端服務、例如Cloud Backup和Cloud Data Sense</block>
+  <block id="b56e74814d72e13b8bd9eb4561010dba" category="list-text">識別已變更且不再符合範本的資源（使用「偏移」功能）</block>
+  <block id="8c1079a8c3d5e5b11329bf8605fb5f44" category="section-title">什麼是「飄移」？</block>
+  <block id="118aedda50dccbbf52d8108f072f5aed" category="paragraph">「偏移」可讓Cloud Manager監控使用範本建立資源時所使用的參數值。此時、「飄移」可以識別資源何時已變更、以便您手動進行調整、使其符合範本的要求。未來當資源超出法規遵循範例時、我們將能傳送通知給您、甚至可以反轉使用者的變更、使從範本建立的所有資源自動恢復法規遵循狀態。</block>
+  <block id="535863b7811f106bde3e7f273a118764" category="inline-link-macro">深入瞭解飄移</block>
+  <block id="ab043d15e26e04a4e88771647e66f422" category="paragraph"><block ref="070f7b254d8faecc6fc5a699202bdab9" category="inline-link-macro-rx"></block>。</block>
+  <block id="04d8b8693a17205c619758eaa8d300e2" category="section-title">可用的範本動作</block>
+  <block id="1521fcd4ef1bd7f293c2968ccf8c8162" category="paragraph">範本是「行動」的鏈、具有一些預先定義的值。您可以建立包含下列動作的範本：</block>
+  <block id="d7b818155971ac6a308c49db2d58706d" category="paragraph">*資源行動：*</block>
+  <block id="afc7000b969456a3160fc4505fb2cc0b" category="list-text">建立Cloud Volumes ONTAP 一個流通（AWS、Azure或GCP）</block>
+  <block id="13a5ac55db7d05c915e23a24a2096643" category="list-text">建立Azure NetApp Files 一個流通量</block>
+  <block id="aa2021a9b8c47541aa967f65a329bdea" category="list-text">建立內部部署ONTAP 的不全功能資料</block>
+  <block id="4850ffe766acbb8beb6c7c24ebcfaf4b" category="list-text">建立Cloud Volumes ONTAP 運作環境（AWS上的單一節點或HA系統）</block>
+  <block id="d1287a3b275ab8ba01a5fff6e4888348" category="list-text">尋找符合特定條件的現有資源（以便您在結束資源時套用「服務」動作）</block>
+  <block id="de66c35536cd0fdc78f33d76a51b81ab" category="paragraph">*服務行動：*</block>
+  <block id="c7f54fc101fff8114fd0bab318e81454" category="list-text">啟動<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 在Volume上（Azure NetApp Files 不適用於</block>
+  <block id="b691f77f5b87583a1ecac4f114cb70cf" category="list-text">啟動<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block> 在Volume上</block>
+  <block id="99869d72f8362c5cb7e7d08bc7a9ad39" category="list-text">啟動<block ref="f2bb37938a60ba7c308705367c1f4d0b" category="inline-link-rx"></block> 在Volume上（Azure NetApp Files 不適用於</block>
+  <block id="1872302bd774dd65cb025cb6c760357c" category="paragraph">例如、您可以建立建立Cloud Volumes ONTAP 一個範本來建立一個功能區。或是建立Cloud Volumes ONTAP 一個「還原」Volume、然後在該Volume上啟用「雲端備份」。或是建立Cloud Volumes ONTAP 一個SURFO Volume、然後在該Volume上啟用Cloud Backup _and Cloud Data感應。</block>
+  <block id="3fb67d827d434a38ea3f2b8aca181ada" category="paragraph">NetApp會隨著時間增加更多行動。</block>
+  <block id="c160acbed127985d3bd7c45726c6e844" category="section-title">應用程式範本的運作方式</block>
+  <block id="34d0c1b964384a0752aad91c917688a4" category="paragraph">應用程式範本服務由3個部分組成。執行範本後、可用的範本「動作」、自訂的應用程式範本、以及已部署的資源。下圖顯示每個元件之間的關係：</block>
+  <block id="f5afa7cf8be08a4f697b8293dad144b2" category="inline-image-macro">與建立及使用應用程式範本有關的不同使用者圖表。</block>
+  <block id="ecfa39b6560418cfe2345a90c8e7e31b" category="paragraph"><block ref="ecfa39b6560418cfe2345a90c8e7e31b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fed74dbc8e98acceae8b4538b3ad2067" category="paragraph">在較高層級、範本的運作方式如下：</block>
+  <block id="83fe213d4e31bface1f9e62afb1dec57" category="list-text">NetApp定義可用的範本「行動」。</block>
+  <block id="d5faf5a6584d91a0f5b4616090f2ec8c" category="paragraph">例如、建立Cloud Volumes ONTAP 一個「動作」來建立一個「聲音集」或Azure NetApp Files 一個「聲音集」。</block>
+  <block id="1ad8e87e4651a2cc69c46159a02233b3" category="list-text">您的儲存架構設計師會選取要用來建立應用程式範本的「動作」、然後針對列出的參數硬編碼特定值。</block>
+  <block id="2c0f798d8b592eb8938ac2f2c3e3a12a" category="paragraph">例如、他們選擇高速磁碟和大量的RAM用於Cloud Volumes ONTAP 支援Oracle資料庫的工作負載。而且需要為每個磁碟區進行備份。</block>
+  <block id="480b6a5d9ee4db8a0ae283b6de8df01f" category="list-text">您的儲存管理員會使用範本來建立資源、這些資源會針對要使用的應用程式進行最佳化。</block>
+  <block id="f8f85ac75a9d32ac7e4bd19a88c88489" category="paragraph">例如、他們會使用為資料庫建立的Volume範本、建立一個將用於Oracle資料庫的Volume。</block>
+  <block id="537f35739e01ac333f01ac9b4cbc3e9f" category="list-text">服務會使用儲存架構設計師所決定的「飄移」功能、追蹤範本中定義的特定資源設定。</block>
+  <block id="8c3c2e38ab977ab43a9ebd00e29973df" category="section-title">定價與授權</block>
+  <block id="0b316d343836cf391faa22682bb80037" category="paragraph">應用程式範本功能不需授權、所有Cloud Manager使用者均可免費使用。</block>
+  <block id="2aa9db43c73bb2f52c729395f9446dd5" category="admonition">範本可讓您將雲端服務套用至已建立的資源、例如在每個Volume上啟用Cloud Backup。在這種情況下、使用備份服務和備份檔案所使用的物件儲存空間都會有成本。</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">限制</block>
+  <block id="8f39707abf86186330a61f0aa7f57c55" category="list-text">任何Gov Cloud區域或沒有網際網路存取的站台均不支援AppTemplate服務。</block>
+  <block id="5853165343224a78fee94389519a9b28" category="list-text">您無法使用範本在Cloud Volumes ONTAP 現有的Aggregate上建立一個流通量。新的磁碟區會建立在新的Aggregate中。</block>
+  <block id="e1f059ce610c426bc048a916e53ae32d" category="summary">Cloud Manager可以監控使用「偏移」功能建立範本的資源時所使用的參數值。「飄移」可識別已變更且不再符合範本設定的資源。</block>
+  <block id="738c328d0087a068339b3d63cd01f51a" category="doc">檢查資源是否符合範本規範</block>
+  <block id="8e09fe4243173c7be4058a88ee5dccbe" category="paragraph">此時、心軸會識別資源中已變更的參數、您必須手動調整資源、使其符合範本的要求。</block>
+  <block id="2ab3e4cd0d86d65f9d51ef66c0c979a1" category="section-title">漂流如何運作</block>
+  <block id="270a79863849b0f5a1fb6e3ca8c5e8cf" category="paragraph">偏移可識別不符合規範的參數、如下所示：</block>
+  <block id="2f4767232b378f442b114c6df47c9e64" category="list-text">建立範本時、您會針對不想讓使用者變更的特定參數開啟偏移功能。例如、您可能需要使用「預設」原則、為從範本建立的所有磁碟區建立Snapshot複本。</block>
+  <block id="176d49d1e84215b444f439fea07a3329" category="inline-image-macro">顯示如何在範本中的單一參數上啟用偏移的快照。</block>
+  <block id="311336fcea41c68a3d16c7293d66a166" category="paragraph"><block ref="311336fcea41c68a3d16c7293d66a166" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1b69884668207d8257a2c199585d3c4" category="list-text">開啟範本的偏移功能、然後儲存範本。</block>
+  <block id="a58a17de18b8ff4081df6a8a029fddef" category="inline-image-macro">顯示如何啟用範本偏移的快照。</block>
+  <block id="65439c70b898804017251c3d89e4b9a1" category="paragraph"><block ref="65439c70b898804017251c3d89e4b9a1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a89edd795717fc5788fde97a150cdbfd" category="list-text">儲存管理員會執行範本以建立磁碟區。</block>
+  <block id="702cc5e5b03abb2b13b06653993301cd" category="list-text">之後、儲存設備管理員會編輯磁碟區並停用Snapshot複本。</block>
+  <block id="e0ea1e6e9a11e8802d9e17bd8c65420e" category="list-text">您在所有範本上執行偏移檢查、而AppTemplate服務會將Snapshot複本範本設定與Volume中的目前設定進行比較。任何不合規的值都會加上旗標、以便修正不正確的設定。</block>
+  <block id="6f1e06cdf469f6c9e2d5664f82d4cd46" category="section-title">DrivFT儀表板</block>
+  <block id="eb00a81284bf83afa086db3e1e91383f" category="paragraph">「DrivFT儀表板」會顯示已使用範本建立的資源總數（例如磁碟區）、仍符合範本的數量、不符合標準的數量（偏移）、以及停用「DrivFT」（飄移）所建立的數量。</block>
+  <block id="55173c154995f28e9df46343a9ce0561" category="inline-image-macro">AppTemplate服務的DrivFT儀表板快照。</block>
+  <block id="a7e6e26f0a43b99c8a207a6d0a7bc773" category="paragraph"><block ref="a7e6e26f0a43b99c8a207a6d0a7bc773" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="812ce4d3a07734d12cdaa3ed2010e22f" category="list-text">每欄頂端的控制項可讓您依照數字或字母順序來排序結果。</block>
+  <block id="0359e3c0b32dfd6306bd3d50e3c2de03" category="list-text">。 <block ref="3fd7363714f2e2423924118bfd6b7147" category="inline-image-macro-rx" type="image"></block> 可讓您依範本名稱、資料刪除原則與狀態及動作類型來篩選結果。例如：</block>
+  <block id="dc2aed6b9b1f1b0a6c08ee34faba057f" category="inline-image-macro">顯示如何使用篩選工具小工具來精簡資源清單的快照。</block>
+  <block id="226b350675cf80a6c8ef906f3d514866" category="paragraph"><block ref="226b350675cf80a6c8ef906f3d514866" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b50b58694b4498c8af71d92940ef4b4a" category="list-text">搜尋列可讓您搜尋特定的Volume名稱或範本名稱。</block>
+  <block id="2289aac3f042b380f68ae94d3b80edcc" category="list-text">若要深入瞭解實際資源（或磁碟區）的詳細資料、例如工作環境和儲存VM、請按一下 <block ref="a74720392297d66ac1ab9a90296912c9" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="b652d688fe7bd49013e097debd62377d" category="inline-image-macro">顯示心軸儀表板中磁碟區詳細資料的快照。</block>
+  <block id="f94f5da3d864a2802ec18ef34e31c632" category="paragraph"><block ref="f94f5da3d864a2802ec18ef34e31c632" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6ce5c8ea7a5fe26d49cc620ef72e8bf" category="section-title">填入「DrivFT儀表板」</block>
+  <block id="5ae7cb61db9467082e9eea24cffa5c5d" category="paragraph">您必須先對範本執行偏移檢查、然後再將其填入「飄移儀表板」中的值。</block>
+  <block id="6f2802bd954a52da9413653f06974328" category="paragraph">您可以從範本儀表板執行所有範本的偏移檢查：</block>
+  <block id="d3b285f784c0ba93aec0e96991c6426b" category="inline-image-macro">顯示如何執行所有範本的偏移檢查的快照。</block>
+  <block id="6800c3ab10609f87e92b1c2d671d818a" category="paragraph"><block ref="6800c3ab10609f87e92b1c2d671d818a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58e7eda3b48d7587cdb37980702881b8" category="paragraph">您可以從範本儀表板對單一範本執行偏移檢查：</block>
+  <block id="30055c2914e5982a3d4520c8d7341dae" category="inline-image-macro">顯示如何執行單一範本的偏移檢查的快照。</block>
+  <block id="09ba0e6ca6c933763f67961bc73d1c49" category="paragraph"><block ref="09ba0e6ca6c933763f67961bc73d1c49" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b36ada9c7c56f786c71fdfbea02d95d3" category="section-title">針對不合規的資源建立偏移報告</block>
+  <block id="aeb389bbf15541824e09549764a991ad" category="paragraph">您可以檢視單一資源的偏移報告、或執行報告下載所有資源的報告。您可以使用此報告指派行動給系統管理員、以便進行變更、使資源恢復符合範本的規定。</block>
+  <block id="a5a5986754b343a286af80fd084ea988" category="paragraph">您可以按一下「DrivFT儀表板」中某個資源的「DrivFT」圖示、以檢視每個資源中不相容的參數清單。</block>
+  <block id="ecbe0476f7995436a619fbec67b150ea" category="inline-image-macro">單一資源的飄移報告快照。</block>
+  <block id="e278cbaa988c388eb4f070a874cc7c84" category="paragraph"><block ref="e278cbaa988c388eb4f070a874cc7c84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f5aeece6a8367e0a2a950b59ac5d280f" category="paragraph">若要檢視從範本建立之資源的偏移報告、請按一下 <block ref="6ba48bcb767669a826177023eada095d" category="inline-image-macro-rx" type="image"></block> 下載.CSV檔案。飄移報告會反映頁面上目前篩選的內容、除非您尚未套用頁面上的任何篩選條件、否則不會顯示所有資源。</block>
+  <block id="534c380a5cdca5610f18de17fa526847" category="section-title">「偏移」報告中的複寫健全狀況詳細資料</block>
+  <block id="b5363a8f8717713698cd5f0ade6c4a83" category="inline-link-macro">使用範本在磁碟區上啟用複寫</block>
+  <block id="6bb92fc8b301ed81b081eeb63f8c277d" category="paragraph">何時 <block ref="eef24c085d3101627e03570b2ef27e8a" category="inline-link-macro-rx"></block>、您可以選擇在「啟用複寫健全狀況監控」欄位中啟用偏移、以在偏移報告中顯示更詳細的複寫資訊。啟用後、「偏移」報告會顯示「複寫」關係是否健全或不健全（偏移）、以及SnapMirror延遲時間、狀態和上次傳輸時間。</block>
+  <block id="6ffc1ecbaefdcfbed3ede7fdb124aa93" category="paragraph">此快照顯示在偏移報告中、SnapMirror關係不健全的複寫詳細資料。</block>
+  <block id="16c2c563a9c70bc38dcd5058d89852a7" category="inline-image-macro">DrivFT報告的快照、顯示不健全的SnapMirror關係複寫詳細資料。</block>
+  <block id="dda535bed967fed0495f552c6c54b14e" category="paragraph"><block ref="dda535bed967fed0495f552c6c54b14e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9986dfbd663475bd0b9a159d82e3587" category="paragraph">*附註：*複寫一開始會套用至磁碟區、因此健全狀況會傳回為「假」、表示這是不健全的。幾分鐘後、將會顯示實際的複寫狀態。</block>
+  <block id="8c56922858331beaa2fea4df2fc792c6" category="summary">Cloud Manager可讓您將標記套用至現有資源、以協助組織及管理這些資源。標記是中繼資料、可用來將資源分組、以識別應用程式、環境、地區、帳單代碼、雲端供應商、 以及更多資訊。</block>
+  <block id="bed434cdb82938c37e10ec775ee39334" category="doc">深入瞭解標記</block>
+  <block id="40fa3ed3deb11f4523fb01c3e53cd533" category="paragraph">標籤由*標籤機碼*和*標籤值*組成。例如、您可以建立名為「Environment」的標記機碼、然後新增「Production」和「Test」的標記值。將這些資源套用至您的資源之後、您可以快速搜尋並檢視符合金鑰/值配對的資源。</block>
+  <block id="3ebce6b779786d56694bbe904777f9b7" category="inline-link-macro">您所建置的Cloud Manager範本</block>
+  <block id="c076b5a8076ba06e9f4f25544552b0f8" category="paragraph">您可以在建立工作環境或Azure NetApp Files 使用本產品時、將標記金鑰/值配對新增至_new資源。您也可以在中定義標記金鑰/值配對 <block ref="cccec4231e26dd3cfde8f707c64ce7d6" category="inline-link-macro-rx"></block> 適用於您的儲存管理員和DevOps工程師。</block>
+  <block id="126a062727c3057b3a937eb69aaa1597" category="paragraph">您可以使用標記服務新增標記、也可以變更或刪除現有標記。</block>
+  <block id="5e30e27f68a75ca7a2e3182f2dd12b16" category="paragraph">標記服務提供下列功能與優點：</block>
+  <block id="3ea3f03a9826c525b7f8e89cf5f45bb0" category="list-text">建立符合您環境中所用詞彙的標記索引鍵和標記值</block>
+  <block id="39aff6391798a3cbbbd4f8b8cd74dc8c" category="list-text">整理環境中的資源、以利監控和管理</block>
+  <block id="9a9d09dff347b4f762cb3ea1cb1761a1" category="list-text">依資源類型新增、移除及編輯標記索引鍵和標記值</block>
+  <block id="4aeb19e9643ca4bd7c08134d7f5d73ad" category="list-text">標記ONTAP AWS和Azure環境中的資源和資源。</block>
+  <block id="15a9a77c4cf2e80203ba12f1c0e8550c" category="paragraph">若要標記您的資源、無需授權、所有具有「帳戶管理」或「工作區管理」角色的Cloud Manager使用者均可自由使用。</block>
+  <block id="9b3643d929067c43445625ecc4b23130" category="section-title">您可以標記的資源</block>
+  <block id="b087cfd5a6751cde85bc43abdbea1db3" category="paragraph">您可以將標記套用至下列資源。</block>
+  <block id="27703c8f150ac4bb0a3a83a7857353af" category="cell">供應商</block>
+  <block id="c2ba7e785c49050f48da9aacc45c2b85" category="cell">服務</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">資源</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="cell">Cloud Volumes ONTAP</block>
+  <block id="4d69d42719426a48d653efcd0d9add65" category="cell">Aggregate Storage VM Volume</block>
+  <block id="342ce22b061856522db3129652a55efb" category="cell">內部部署ONTAP 的功能</block>
+  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="cell">Azure NetApp Files</block>
+  <block id="bd7a9717d29c5ddcab1bc175eda1e298" category="cell">Volume</block>
+  <block id="808c50beba133531e42fe04b9b13b86d" category="cell">NetApp服務</block>
+  <block id="d8e87c0927539672f54462c837be0b7f" category="cell">同步</block>
+  <block id="fbc97786af4bf30dc5b07809a950792c" category="cell">關係</block>
+  <block id="81b22456f78954c460ce2f531b5e048f" category="cell">EC2.</block>
+  <block id="44418c8dd436ba2904b49d544d4c90b8" category="cell">執行個體安全群組子網路Volume VPC</block>
+  <block id="a623a8d0366bf079411aa30be45b2d10" category="cell">運算</block>
+  <block id="0f8732d258fffa0be0320d1a4e5bdccb" category="cell">Snapshot虛擬機器</block>
+  <block id="eec89088ee408b80387155272b113256" category="cell">網路</block>
+  <block id="6c096562a66b477196cc713915b16952" category="cell">安全性群組虛擬網路</block>
+  <block id="dd23acac46f17cbfd4d5541f8ee3c7a1" category="cell">資源群組</block>
+  <block id="8c4aa541ee911e8d80451ef8cc304806" category="cell">儲存設備</block>
+  <block id="add55592acf21be3b81edc0cbd46b3c5" category="cell">儲存帳戶</block>
+  <block id="d9a17c1c9e8ef6866e4dbeef41c741b2" category="cell">執行個體</block>
+  <block id="30edf70db68aa84f05d3e72326807b0c" category="cell">鏟斗</block>
+  <block id="aa00eddbc27bae0a6cb4210ab565c4df" category="paragraph">如需AWS EC2標籤的相關資訊、請參閱<block ref="9bd250e03cdf80384a24635f16673602" category="inline-link-rx"></block>。</block>
+  <block id="d25af39a1cc1d41b4b78226055c6969d" category="inline-link">Azure文件：標記Azure資源</block>
+  <block id="cd3891a596fb71f2018f9febccdc9311" category="paragraph">如需Azure標籤的相關資訊、請參閱<block ref="132818a7eea2f1dd8c5e1c57244359ed" category="inline-link-rx"></block>。</block>
+  <block id="044bd5bc02d27eb17ed3cc5a11be4f3b" category="inline-link">Google Cloud文件：標記Google Cloud資源</block>
+  <block id="3b0992b7e8536fc1e15651502081b6e6" category="paragraph">如需Google標籤的相關資訊、請參閱<block ref="5b102b4e66babd115f4b84c9458d0cfc" category="inline-link-rx"></block>。</block>
+  <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="section-title">先決條件</block>
+  <block id="2e555eb89efbc4fa0651bd1f644cf78e" category="section-title">驗證您的AWS Connector權限</block>
+  <block id="ede60e0200bc22484e50c25ec183617f" category="paragraph">如果您是使用Cloud Manager 3.9.10或更新版本建立Connector、那麼您就已經設定好了。如果您使用舊版Cloud Manager建立Connector、則需要新增Cloud Manager IAM角色的一些必要權限、以標記AWS EC2執行個體：</block>
+  <block id="f684df81e4cb924eb887af3d63731c28" category="section-title">驗證Azure Connector權限</block>
+  <block id="55e86ad3487f5a74e4a7f3adf4c7d04c" category="paragraph">如果您是使用Cloud Manager 3.9.10或更新版本建立Connector、那麼您就已經設定好了。如果您使用舊版Cloud Manager建立Connector、則需要新增Cloud Manager營運者IAM角色的必要權限、以標記Azure資源：</block>
+  <block id="2a6cf45576e45e1753cb8e4a3218f9bf" category="section-title">標記規則與限制</block>
+  <block id="310e25dd524b7da8c8ff6eb8edf50e5f" category="paragraph">建立標記金鑰和標記值時、適用下列規則：</block>
+  <block id="47c6baf2a93fb70987f8d50230d68450" category="list-text">金鑰長度上限：128個字元</block>
+  <block id="00b61ace6d8de8337a462fc4b2ca3c47" category="list-text">金鑰值長度上限：256個字元</block>
+  <block id="ccf8bf5880815b88f3f09c36d316225e" category="list-text">有效的標記和標記值字元：字母、數字、空格和特殊字元（_、@、&amp;、*等）</block>
+  <block id="451514576a381fcadab95c07d22ca563" category="list-text">標記區分大小寫。</block>
+  <block id="392a91200b1b67f84f30feca1ddfdf35" category="list-text">每個資源的標記上限：30個</block>
+  <block id="377d030d59bcd66d28017369cb57f768" category="list-text">每個資源的每個標記金鑰都必須是唯一的</block>
+  <block id="ddddcee4ac303defe9ce2211f2d4acc6" category="section-title">標記範例</block>
+  <block id="897356954c2cd3d41b221e3f24f99bba" category="cell">金鑰</block>
+  <block id="c82a6100dace2b41087ba6cf99a5976a" category="cell">價值</block>
+  <block id="aa9f9a8454a370443372f6259447844e" category="cell">ENV</block>
+  <block id="0c36db035cf92c76b7ade068ae9b8d68" category="cell">正式作業測試</block>
+  <block id="269e78d1f721be5126be1f09bb4b091b" category="cell">部門</block>
+  <block id="f6ab9ceccae969405a9121790a11420d" category="cell">財務銷售人員</block>
+  <block id="b6f4a2ec6356bbd56d49f2096bf9d3d3" category="cell">擁有者</block>
+  <block id="329185ee9cca0721a94429c99d157bdf" category="cell">管理儲存設備</block>
+  <block id="f56a22734fbef43dcef97b492e9cd352" category="summary">您可以在建立範本時使用某些功能、以便在動作之間傳遞值（例如磁碟區名稱）、有條件地將動作連結在一起（在新磁碟區上啟用備份）、以及在使用範本時協助使用者自訂資源。</block>
+  <block id="889ecb758e53f24c9efd4553bc09c14a" category="doc">範本建置區塊</block>
+  <block id="4312f94678a5f3a99677eff317710d96" category="section-title">特殊範本控制項</block>
+  <block id="d5e78bfdae44e43da50bb405d5cd401f" category="paragraph">在開始建立範本之前、您應該先瞭解一些特殊選項、以便在範本中預先填入參數值時設定這些選項。</block>
+  <block id="f7951f72b872a8abe85b8d46142331e7" category="inline-image-macro">可編輯及偏移選項的螢幕擷取畫面、您可以設定參數值。</block>
+  <block id="f20206d79ec146d281beed50d8e29708" category="paragraph"><block ref="f20206d79ec146d281beed50d8e29708" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="92c1f46b9da02a5d7bbcff6543bd9588" category="section-title">可編輯核取方塊</block>
+  <block id="3f8e4e6365aa394b3479fdef75fe9f72" category="paragraph">核取此方塊可讓儲存管理員覆寫您在範本中輸入的預先填入值。這可讓儲存設備管理員建議應使用的值、但可讓他們在建立資源時自訂值。</block>
+  <block id="c1740fe5b39f93f6c892f09718e037b2" category="paragraph">取消核取時、使用者無法變更值、而且系統管理員部署資源時、一律會使用範本中的硬編碼值。</block>
+  <block id="c476134c72fb48531290a4040a823edc" category="section-title">偏移核取方塊</block>
+  <block id="85ae8cb8d8b796e60de4989a08de70c5" category="paragraph">核取此方塊、以便Cloud Manager在使用範本建立資源時、監控您為參數輸入的硬編碼值。稍後、您可以執行「DrivFT報告」、查看哪些已設定為「DrivFT」的欄位不再符合範本設定。</block>
+  <block id="b24825d81b9d78c2ec0b3766ce0f0e29" category="paragraph">取消核取時、使用者可以在建立資源之後、將值變更為任何值。</block>
+  <block id="dc61d8962272ba87fc289d3611028a92" category="admonition">為使飄移特徵正常運作、在範本中定義某些參數的偏移之後、您必須啟用範本的偏移特徵。這是建立範本的最後一個步驟。如果已啟用參數但尚未在範本上啟用、就無法使用偏移。</block>
+  <block id="14425fa948dd33c64b1ac596d827664d" category="section-title">在欄位中使用規則運算式（regex）</block>
+  <block id="789deba0d8cee492441e0edbdd3b1443" category="paragraph">範本中有幾個欄位可讓您輸入regex、以定義管理員可以在欄位中輸入的值、例如「Volume Name」（Volume名稱）和「Share Name」（共用名稱）。</block>
+  <block id="92d0236acb01b23304b36e13b20df879" category="inline-image-macro">使用regex定義Volume名稱允許值的快照。</block>
+  <block id="8618076424bfb56bff4b8d378642afb7" category="paragraph"><block ref="8618076424bfb56bff4b8d378642afb7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd79c94f5c040103b6ee92a27142a209" category="paragraph">例如、如果您輸入「#[a-zA-Z][0-9a-zA-Z_]｛0、149｝$」作為Volume名稱的regex、則表示「_名稱應以字母字元開頭、只能包含數字、字母或底線、長度_應為150個或更少字元。」</block>
+  <block id="d9b7b2a8c18514b566365444476ee67b" category="section-title">在範本動作之間傳遞值</block>
+  <block id="49c2ea485e68d2177e58bb2d451473c8" category="paragraph">範本能夠使用先前動作的資訊、在未來的行動中填入欄位。例如、當定義將啟用Cloud Backup功能的磁碟區名稱時、您可以指示備份動作使用儲存設備管理員在「Create Cloud Volumes ONTAP 」（建立）動作中輸入的磁碟區名稱值。</block>
+  <block id="317d9ac287a0bb30f0b154a9372237b4" category="paragraph">AppTemplate服務可使用三種類型的資訊：</block>
+  <block id="79bc4a04a5f308a67f608558bf0e314a" category="list-text">輸入值：這是儲存設備管理員在先前範本動作的欄位中輸入的實際值。</block>
+  <block id="86d263367d069f32b10ed5bb15d5876b" category="list-text">輸出值：這是Cloud Manager從先前的範本動作建立資源後所產生的價值。</block>
+  <block id="cb1be534cc7a13fb27acf340f07c83b6" category="list-text">輸入您自己的值-這是您輸入的值、無法從範本中的先前動作存取。</block>
+  <block id="fc8fb6e55d63eccfe4d2093ef3d494bf" category="paragraph">例如、若要在磁碟區上啟用法規遵循掃描、Cloud Data Sense服務需要儲存設備管理員輸入的「Volume name」（磁碟區名稱）（輸入值）、以及Cloud Manager在建立磁碟區時產生的「Volume uuid」（輸出值）。</block>
+  <block id="536e2c2dd1b0f2e4362deffc386760c4" category="paragraph">下圖顯示如何在範本的「Cloud Data Sense Action（雲端資料感測行動）」區段中輸入此資訊。</block>
+  <block id="a4d99746ded90308d15ecf5dc8850229" category="inline-image-macro">顯示如何使用在先前動作中輸入的值、在其他動作中填入欄位的圖例。</block>
+  <block id="eefa405d25c68122a3d10c7be99b3fed" category="paragraph"><block ref="eefa405d25c68122a3d10c7be99b3fed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1e7ffb254a56e57a7a94185e202f98b7" category="section-title">根據邏輯陳述、使用條件來執行不同的動作</block>
+  <block id="933e850f0252230afcc3081c478f82cb" category="paragraph">條件會根據儲存設備管理員執行範本時的條件是真的還是假、讓範本執行不同的動作。您可以選取*邏輯條件*動作來新增條件：</block>
+  <block id="80f465f960c99f0bf9c9dda68bd2ff80" category="inline-image-macro">如何在範本中新增條件式陳述式的快照。</block>
+  <block id="2f732de965d52c1cf23ba8cc9dbdc7b1" category="paragraph"><block ref="2f732de965d52c1cf23ba8cc9dbdc7b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e7972af994bafc7ee1059b02b60c648d" category="paragraph">例如、您可能有一項準則、指出如果某個磁碟區的容量大於50 GB、則必須在該磁碟區上啟用Cloud Backup。如果磁碟區容量較小、則不會啟用Cloud Backup。您可以在範本中實作此功能、如下所示。</block>
+  <block id="af1dd10b1395740a8581cea239cb13fc" category="inline-image-macro">快照顯示範本中的條件如何用於有條件地啟用Cloud Backup。</block>
+  <block id="81943cf2af4bc753aa5e517503f627e6" category="paragraph"><block ref="81943cf2af4bc753aa5e517503f627e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d94635611474af73ec85b190b28449bd" category="paragraph">條件包含兩個部分：</block>
+  <block id="01928da743a4e955b96a5b859c5f4bc4" category="list-text">規則-您要檢查的項目為真或假。</block>
+  <block id="07876d2610f838d9cb19ae7aeadd98be" category="list-text">和/或聲明：可讓您使用多個規則、進一步調整是否新增其他動作。</block>
+  <block id="c962626fb4ad9b65cc3a4217695f094c" category="paragraph">規則由三個部分組成：</block>
+  <block id="7960c7072233e2369dad8e54b3c23d04" category="paragraph">*來源欄位*：您將從中取得值進行比較的位置。</block>
+  <block id="46b1885cab50ba7f852ee7e4296586b1" category="list-text">從行動取得輸入值：儲存設備管理員在先前範本行動的欄位中輸入的實際值。</block>
+  <block id="2e1dd6450d9c9986cc77c74a7e699498" category="list-text">從行動取得輸出值：從先前的範本動作建立資源之後所產生的Cloud Manager價值。</block>
+  <block id="ac2e89a4baae83530e11a9c64165f130" category="list-text">Enter Value（輸入值）-這是您輸入的值、無法從範本中的先前動作存取。這可以是現有資源的值、例如現有的Volume。</block>
+  <block id="f7d6dca310f4edc482b1d3bd0cdfb18f" category="paragraph">*運算子*-用於比較的運算子。選項包括*等*、*不等於*、*大於*、*小於*、*大於或等於*、*小於或等於*。</block>
+  <block id="67547dca721bdbf95912a7906fe534d0" category="paragraph">*欄位值*-您要比較的實際值。選項與_來源欄位_的選項相同。</block>
+  <block id="b0d1e1e2323f9c0a905de14efcf597fc" category="paragraph">和/或陳述式可讓您在使用者執行範本時、根據多個規則是否被評估為「真」或「假」、有條件地新增更多動作。*和*要求所有規則為真或假、而*或*只需要其中一個規則為真或假。</block>
+  <block id="ebb6a65b01a975d2a1a81fadb941a41c" category="paragraph">在規則中同時使用和和或陳述式時、評估程序會遵循標準的數學順序、其中「和」會在「OR」之前。例如：</block>
+  <block id="d53609834d8e761d8b38e21f9aa36fda" category="list-text">&lt;Rule1&gt;或&lt;Rule2&gt;和&lt;Rule3&gt;</block>
+  <block id="313a2072e1da794cb340b46d310d902f" category="paragraph">此陳述式的評估順序如下：&lt;Rule1&gt;或（&lt;Rule&gt;&gt;和&lt;Rule3&gt;）</block>
+  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">在您透過NetApp技術支援開啟支援案例之前、您必須先將NetApp支援網站帳戶新增至Cloud Manager、然後註冊以取得支援。</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以取得支援</block>
+  <block id="aeaeee19a7c393222e407a525cf01991" category="section-title">新增一個NSS帳戶</block>
+  <block id="de2241fea60d98698faaa196ff73ee80" category="paragraph">「支援儀表板」可讓您從單一位置新增及管理所有NetApp支援網站帳戶。</block>
+  <block id="5be2593b5948f30a15179a32daa73ee2" category="inline-link">註冊一項</block>
+  <block id="14b05cf61f1aba58d38b393e69b69538" category="list-text">如果您還沒有 NetApp 支援網站帳戶、<block ref="0a8e82436ea73fe635862cfba3acf101" category="inline-link-rx"></block>。</block>
+  <block id="0046efb3377274ff3215d4b30269809e" category="list-text">在Cloud Manager主控台右上角、按一下「說明」圖示、然後選取*「支援」*。</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">「說明」功能表的快照、其中「支援」是第一個列出的選項</block>
+  <block id="868d9aa88f16ea923af1d15eac5d2647" category="paragraph"><block ref="868d9aa88f16ea923af1d15eac5d2647" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d17d6b5dafebab6b7659da8850737e70" category="list-text">按一下「*」「nss管理」&gt;「新增nssAccount」*。</block>
+  <block id="8aaf101e623c543c7eef3c65f6233366" category="list-text">出現提示時、按一下*繼續*以重新導向至Microsoft登入頁面。</block>
+  <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp使用Microsoft Azure Active Directory做為身分識別供應商、提供專為支援與授權所設計的驗證服務。</block>
+  <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登入頁面上、提供您的NetApp支援網站註冊電子郵件地址和密碼、以執行驗證程序。</block>
+  <block id="f5fb4199485234c409525f430b737010" category="paragraph">此動作可讓Cloud Manager使用您的NSS帳戶。</block>
+  <block id="b4c6a2f33e7b2a38495546b8d5cd8e84" category="paragraph">附註：帳戶必須是客戶層級的帳戶（非來賓帳戶或臨時帳戶）。</block>
+  <block id="fc65ebd4739f2f8ca46062a8280faea9" category="section-title">註冊您的帳戶以取得支援</block>
+  <block id="3e080914efe0d0ca025439fbb68d437f" category="paragraph">支援註冊可從支援儀表板的Cloud Manager取得。</block>
+  <block id="fb07bf6b7698dbe934b8b2164d915484" category="list-text">在* Resources（資源）*選項卡中，單擊* Register for Support*（註冊以獲得支持*）。</block>
+  <block id="392fb0270d0d84dbc3fdf8c67da1e5ad" category="list-text">選取您要登錄的NSS認證、然後按一下「*登錄*」。</block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
+  <block id="01861a2435910cac249c0a1eaea3e27b" category="sidebar">應用程式範本文件</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
+  <block id="973d48daa10556f358647cfe1cc53216" category="sidebar">使用應用程式範本</block>
+  <block id="d878dbf9ab702cfef892ea35b53108d3" category="sidebar">使用範本來標準化資源建立</block>
+  <block id="52b2438a3d1515af5b3918e6d0fa443d" category="sidebar">為組織建置範本</block>
+  <block id="1ff123cfbf88ad9c58cfd44c2b72c291" category="sidebar">執行範本以建立資源</block>
+  <block id="4a37630008b707a26bac4e9b9d2d91bc" category="sidebar">使用標記來組織資源</block>
+  <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
+  <block id="35f98b47133ad8954f63b25aef2dad3a" category="sidebar">瞭解標記</block>
+  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="sidebar">新增功能</block>
+  <block id="12b8ed36a576a6d4769c8d350b438a8a" category="sidebar">建立範本</block>
+  <block id="59cccee54a9c1422dca33d7662d37b76" category="sidebar">作業環境Cloud Volumes ONTAP</block>
+  <block id="f829fef4575b38109cd246bafbd6718e" category="sidebar">流通量Cloud Volumes ONTAP</block>
+  <block id="217aec976bd66d37571f1fe0e44a4e77" category="sidebar">流通量Azure NetApp Files</block>
+  <block id="21dc3aafb4a3e393dccd900e9ba42118" category="sidebar">內部部署ONTAP 的產品不只是功能</block>
+  <block id="dc771c253d08d9cdafc72d7919e16d98" category="sidebar">新增備份、資料感應或複寫功能至磁碟區</block>
+  <block id="c8ca3079f96c0e324b876d7055a67c46" category="sidebar">使用範本建立資源</block>
+  <block id="70deba7f047a2bcc0d20e5ef94a2abf8" category="sidebar">CVO、內部部署和ANF的Volume</block>
+  <block id="f8de1ec8d7766950989e3205a63d91d9" category="sidebar">使用範本和標記來管理資源</block>
+  <block id="e85920abe34a4184988f078bd1e73279" category="sidebar">檢查資源是否符合範本規範（飄移）</block>
+  <block id="441c6d31d8063270a27b242c68cc0e6e" category="sidebar">執行可尋找現有資源的範本</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
+</blocks>
