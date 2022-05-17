@@ -534,10 +534,7 @@
   <block id="3a07949495aa0f10524a38b2f8b42ff9" category="list-text">自動化並改善基礎架構的設計與開發</block>
   <block id="628898f2daed85c109f1e353f32ae510" category="list-text">提供單一位置以啟動不同的NetApp雲端服務、例如Cloud Backup和Cloud Data Sense</block>
   <block id="b56e74814d72e13b8bd9eb4561010dba" category="list-text">識別已變更且不再符合範本的資源（使用「偏移」功能）</block>
-  <block id="8c1079a8c3d5e5b11329bf8605fb5f44" category="section-title">什麼是「飄移」？</block>
-  <block id="118aedda50dccbbf52d8108f072f5aed" category="paragraph">「偏移」可讓Cloud Manager監控使用範本建立資源時所使用的參數值。此時、「飄移」可以識別資源何時已變更、以便您手動進行調整、使其符合範本的要求。未來當資源超出法規遵循範例時、我們將能傳送通知給您、甚至可以反轉使用者的變更、使從範本建立的所有資源自動恢復法規遵循狀態。</block>
   <block id="535863b7811f106bde3e7f273a118764" category="inline-link-macro">深入瞭解飄移</block>
-  <block id="ab043d15e26e04a4e88771647e66f422" category="paragraph"><block ref="070f7b254d8faecc6fc5a699202bdab9" category="inline-link-macro-rx"></block>。</block>
   <block id="04d8b8693a17205c619758eaa8d300e2" category="section-title">可用的範本動作</block>
   <block id="1521fcd4ef1bd7f293c2968ccf8c8162" category="paragraph">範本是「行動」的鏈、具有一些預先定義的值。您可以建立包含下列動作的範本：</block>
   <block id="d7b818155971ac6a308c49db2d58706d" category="paragraph">*資源行動：*</block>
@@ -572,7 +569,6 @@
   <block id="5853165343224a78fee94389519a9b28" category="list-text">您無法使用範本在Cloud Volumes ONTAP 現有的Aggregate上建立一個流通量。新的磁碟區會建立在新的Aggregate中。</block>
   <block id="e1f059ce610c426bc048a916e53ae32d" category="summary">Cloud Manager可以監控使用「偏移」功能建立範本的資源時所使用的參數值。「飄移」可識別已變更且不再符合範本設定的資源。</block>
   <block id="738c328d0087a068339b3d63cd01f51a" category="doc">檢查資源是否符合範本規範</block>
-  <block id="8e09fe4243173c7be4058a88ee5dccbe" category="paragraph">此時、心軸會識別資源中已變更的參數、您必須手動調整資源、使其符合範本的要求。</block>
   <block id="2ab3e4cd0d86d65f9d51ef66c0c979a1" category="section-title">漂流如何運作</block>
   <block id="270a79863849b0f5a1fb6e3ca8c5e8cf" category="paragraph">偏移可識別不符合規範的參數、如下所示：</block>
   <block id="2f4767232b378f442b114c6df47c9e64" category="list-text">建立範本時、您會針對不想讓使用者變更的特定參數開啟偏移功能。例如、您可能需要使用「預設」原則、為從範本建立的所有磁碟區建立Snapshot複本。</block>
@@ -777,4 +773,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
+  <block id="214a61ce436e46b661501acdeee5221c" category="paragraph">此時、心軸會識別資源中已變更的參數、您必須手動調整資源、使其符合範本的要求。未來當資源超出法規遵循範例時、我們將能傳送通知給您、甚至可以反轉使用者的變更、使從範本建立的所有資源自動恢復法規遵循狀態。</block>
+  <block id="5bd5bf968b8be74cc15838b062223bc7" category="paragraph">此時、您需要手動調整資源、使其符合範本的要求。 <block ref="070f7b254d8faecc6fc5a699202bdab9" category="inline-link-macro-rx"></block>。</block>
 </blocks>
